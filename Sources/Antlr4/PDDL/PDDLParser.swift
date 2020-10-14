@@ -1,4 +1,5 @@
 // Generated from PDDL.g4 by ANTLR 4.8
+import Antlr4
 
 open class PDDLParser: Parser {
 
@@ -17,103 +18,94 @@ open class PDDLParser: Parser {
 	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
-                 T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
-                 T__17 = 18, T__18 = 19, T__19 = 20, T__20 = 21, T__21 = 22, 
-                 T__22 = 23, T__23 = 24, T__24 = 25, T__25 = 26, T__26 = 27, 
-                 T__27 = 28, T__28 = 29, T__29 = 30, T__30 = 31, T__31 = 32, 
-                 T__32 = 33, T__33 = 34, T__34 = 35, T__35 = 36, T__36 = 37, 
-                 T__37 = 38, T__38 = 39, T__39 = 40, T__40 = 41, T__41 = 42, 
-                 T__42 = 43, T__43 = 44, T__44 = 45, T__45 = 46, T__46 = 47, 
-                 T__47 = 48, T__48 = 49, T__49 = 50, T__50 = 51, T__51 = 52, 
-                 T__52 = 53, T__53 = 54, T__54 = 55, T__55 = 56, T__56 = 57, 
-                 T__57 = 58, T__58 = 59, T__59 = 60, T__60 = 61, T__61 = 62, 
-                 T__62 = 63, T__63 = 64, T__64 = 65, T__65 = 66, T__66 = 67, 
-                 REQUIRE_KEY = 68, NAME = 69, VARIABLE = 70, NUMBER = 71, 
-                 LINE_COMMENT = 72, WHITESPACE = 73, DOMAIN = 74, DOMAIN_NAME = 75, 
-                 REQUIREMENTS = 76, TYPES = 77, EITHER_TYPE = 78, CONSTANTS = 79, 
-                 FUNCTIONS = 80, PREDICATES = 81, ACTION = 82, DURATIVE_ACTION = 83, 
-                 PROBLEM = 84, PROBLEM_NAME = 85, PROBLEM_DOMAIN = 86, OBJECTS = 87, 
-                 INIT = 88, FUNC_HEAD = 89, PRECONDITION = 90, EFFECT = 91, 
-                 AND_GD = 92, OR_GD = 93, NOT_GD = 94, IMPLY_GD = 95, EXISTS_GD = 96, 
-                 FORALL_GD = 97, COMPARISON_GD = 98, AND_EFFECT = 99, FORALL_EFFECT = 100, 
-                 WHEN_EFFECT = 101, ASSIGN_EFFECT = 102, NOT_EFFECT = 103, 
-                 PRED_HEAD = 104, GOAL = 105, BINARY_OP = 106, UNARY_MINUS = 107, 
-                 INIT_EQ = 108, INIT_AT = 109, NOT_PRED_INIT = 110, PRED_INST = 111, 
-                 PROBLEM_CONSTRAINT = 112, PROBLEM_METRIC = 113
+                 REQUIRE_KEY = 13, DEFINE = 14, DOMAIN = 15, PROBLEM = 16, 
+                 REQUIREMENTS = 17, TYPES = 18, EITHER = 19, FUNCTIONS = 20, 
+                 CONSTANTS = 21, PREDICATES = 22, CONSTRAINTS = 23, ACTION = 24, 
+                 PARAMETERS = 25, PRECONDITION = 26, EFFECT = 27, AND = 28, 
+                 OR = 29, NOT = 30, IMPLY = 31, EXISTS = 32, FORALL = 33, 
+                 DURATIVE_ACTION = 34, DURATION = 35, CONDITION = 36, PREFERENCE = 37, 
+                 OVER_ALL = 38, AT_START = 39, AT_END = 40, DERIVED = 41, 
+                 WHEN = 42, ASSIGN = 43, INCREASE = 44, DECREASE = 45, SCALE_UP = 46, 
+                 SCALE_DOWN = 47, OBJECTS = 48, INIT = 49, GOAL = 50, METRIC = 51, 
+                 MINIMIZE = 52, MAXIMIZE = 53, TOTAL_TIME = 54, IS_VIOLATED = 55, 
+                 ALWAYS = 56, SOMETIME = 57, WITHIN = 58, AT_MOST_ONCE = 59, 
+                 SOMETIME_AFTER = 60, SOMETIME_BEFORE = 61, ALWAYS_WITHIN = 62, 
+                 HOLD_DURING = 63, HOLD_AFTER = 64, R_STRIPS = 65, R_TYPING = 66, 
+                 R_NEGATIVE_PRECONDITIONS = 67, R_DISJUNCTIVE_PRECONDITIONS = 68, 
+                 R_EQUALITY = 69, R_EXISTENTIAL_PRECONDITIONS = 70, R_UNIVERSAL_PRECONDITIONS = 71, 
+                 R_QUANTIFIED_PRECONDITIONS = 72, R_CONDITIONAL_EFFECTS = 73, 
+                 R_FLUENTS = 74, R_ADL = 75, R_DURATIVE_ACTIONS = 76, R_DERIVED_PREDICATES = 77, 
+                 R_TIMED_INITIAL_LITERALS = 78, R_PREFERENCES = 79, R_CONSTRAINTS = 80, 
+                 R_ACTION_COSTS = 81, STR_NUMBER = 82, NAME = 83, VARIABLE = 84, 
+                 EQUALS = 85, NUMBER = 86, LINE_COMMENT = 87, WHITESPACE = 88
 	}
 
 	public
 	static let RULE_pddlDoc = 0, RULE_domain = 1, RULE_domainName = 2, RULE_requireDef = 3, 
             RULE_typesDef = 4, RULE_typedNameList = 5, RULE_singleTypeNameList = 6, 
-            RULE_r_type = 7, RULE_primType = 8, RULE_functionsDef = 9, RULE_functionList = 10, 
+            RULE_type = 7, RULE_primType = 8, RULE_functionsDef = 9, RULE_functionList = 10, 
             RULE_atomicFunctionSkeleton = 11, RULE_functionSymbol = 12, 
             RULE_functionType = 13, RULE_constantsDef = 14, RULE_predicatesDef = 15, 
             RULE_atomicFormulaSkeleton = 16, RULE_predicate = 17, RULE_typedVariableList = 18, 
             RULE_singleTypeVarList = 19, RULE_constraints = 20, RULE_structureDef = 21, 
             RULE_actionDef = 22, RULE_actionSymbol = 23, RULE_actionDefBody = 24, 
-            RULE_precondition = 25, RULE_goalDesc = 26, RULE_fComp = 27, 
-            RULE_atomicTermFormula = 28, RULE_term = 29, RULE_durativeActionDef = 30, 
-            RULE_daDefBody = 31, RULE_daGD = 32, RULE_prefTimedGD = 33, 
-            RULE_timedGD = 34, RULE_timeSpecifier = 35, RULE_interval = 36, 
-            RULE_derivedDef = 37, RULE_fExp = 38, RULE_fExp2 = 39, RULE_fHead = 40, 
-            RULE_effect = 41, RULE_cEffect = 42, RULE_pEffect = 43, RULE_condEffect = 44, 
-            RULE_binaryOp = 45, RULE_binaryComp = 46, RULE_assignOp = 47, 
-            RULE_durationConstraint = 48, RULE_simpleDurationConstraint = 49, 
-            RULE_durOp = 50, RULE_durValue = 51, RULE_daEffect = 52, RULE_timedEffect = 53, 
-            RULE_fAssignDA = 54, RULE_fExpDA = 55, RULE_assignOpT = 56, 
-            RULE_problem = 57, RULE_problemDecl = 58, RULE_problemDomain = 59, 
-            RULE_objectDecl = 60, RULE_initstate = 61, RULE_initEl = 62, 
-            RULE_nameLiteral = 63, RULE_atomicNameFormula = 64, RULE_goal = 65, 
-            RULE_probConstraints = 66, RULE_prefConGD = 67, RULE_metricSpec = 68, 
-            RULE_optimization = 69, RULE_metricFExp = 70, RULE_conGD = 71, 
-            RULE_name = 72
+            RULE_goalDesc = 25, RULE_fComp = 26, RULE_atomicTermFormula = 27, 
+            RULE_term = 28, RULE_durativeActionDef = 29, RULE_daDefBody = 30, 
+            RULE_daGD = 31, RULE_prefTimedGD = 32, RULE_timedGD = 33, RULE_timeSpecifier = 34, 
+            RULE_interval = 35, RULE_derivedDef = 36, RULE_fExp = 37, RULE_fHead = 38, 
+            RULE_effect = 39, RULE_cEffect = 40, RULE_pEffect = 41, RULE_condEffect = 42, 
+            RULE_binaryOp = 43, RULE_binaryComp = 44, RULE_assignOp = 45, 
+            RULE_durationConstraint = 46, RULE_simpleDurationConstraint = 47, 
+            RULE_durOp = 48, RULE_durValue = 49, RULE_daEffect = 50, RULE_timedEffect = 51, 
+            RULE_fAssignDA = 52, RULE_fExpDA = 53, RULE_problem = 54, RULE_problemDecl = 55, 
+            RULE_problemDomain = 56, RULE_objectDecl = 57, RULE_initState = 58, 
+            RULE_initEl = 59, RULE_nameLiteral = 60, RULE_atomicNameFormula = 61, 
+            RULE_goal = 62, RULE_probConstraints = 63, RULE_prefConGD = 64, 
+            RULE_metricSpec = 65, RULE_optimization = 66, RULE_metricFExp = 67, 
+            RULE_conGD = 68
 
 	public
 	static let ruleNames: [String] = [
 		"pddlDoc", "domain", "domainName", "requireDef", "typesDef", "typedNameList", 
-		"singleTypeNameList", "r_type", "primType", "functionsDef", "functionList", 
+		"singleTypeNameList", "type", "primType", "functionsDef", "functionList", 
 		"atomicFunctionSkeleton", "functionSymbol", "functionType", "constantsDef", 
 		"predicatesDef", "atomicFormulaSkeleton", "predicate", "typedVariableList", 
 		"singleTypeVarList", "constraints", "structureDef", "actionDef", "actionSymbol", 
-		"actionDefBody", "precondition", "goalDesc", "fComp", "atomicTermFormula", 
-		"term", "durativeActionDef", "daDefBody", "daGD", "prefTimedGD", "timedGD", 
-		"timeSpecifier", "interval", "derivedDef", "fExp", "fExp2", "fHead", "effect", 
-		"cEffect", "pEffect", "condEffect", "binaryOp", "binaryComp", "assignOp", 
-		"durationConstraint", "simpleDurationConstraint", "durOp", "durValue", 
-		"daEffect", "timedEffect", "fAssignDA", "fExpDA", "assignOpT", "problem", 
-		"problemDecl", "problemDomain", "objectDecl", "initstate", "initEl", "nameLiteral", 
-		"atomicNameFormula", "goal", "probConstraints", "prefConGD", "metricSpec", 
-		"optimization", "metricFExp", "conGD", "name"
+		"actionDefBody", "goalDesc", "fComp", "atomicTermFormula", "term", "durativeActionDef", 
+		"daDefBody", "daGD", "prefTimedGD", "timedGD", "timeSpecifier", "interval", 
+		"derivedDef", "fExp", "fHead", "effect", "cEffect", "pEffect", "condEffect", 
+		"binaryOp", "binaryComp", "assignOp", "durationConstraint", "simpleDurationConstraint", 
+		"durOp", "durValue", "daEffect", "timedEffect", "fAssignDA", "fExpDA", 
+		"problem", "problemDecl", "problemDomain", "objectDecl", "initState", 
+		"initEl", "nameLiteral", "atomicNameFormula", "goal", "probConstraints", 
+		"prefConGD", "metricSpec", "optimization", "metricFExp", "conGD"
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
-		nil, "'('", "'define'", "')'", "'domain'", "':requirements'", "':types'", 
-		"'-'", "'either'", "':functions'", "'number'", "':constants'", "':predicates'", 
-		"':constraints'", "':action'", "':parameters'", "':precondition'", "':effect'", 
-		"'and'", "'or'", "'not'", "'imply'", "'exists'", "'forall'", "':durative-action'", 
-		"':duration'", "':condition'", "'preference'", "'at'", "'over'", "'start'", 
-		"'end'", "'all'", "':derived'", "'when'", "'*'", "'+'", "'/'", "'>'", 
-		"'<'", "'='", "'>='", "'<='", "'assign'", "'scale-up'", "'scale-down'", 
-		"'increase'", "'decrease'", "'?duration'", "'problem'", "':domain'", "':objects'", 
-		"':init'", "':goal'", "':metric'", "'minimize'", "'maximize'", "'total-time'", 
-		"'is-violated'", "'always'", "'sometime'", "'within'", "'at-most-once'", 
-		"'sometime-after'", "'sometime-before'", "'always-within'", "'hold-during'", 
-		"'hold-after'"
+		nil, "'('", "')'", "':'", "'-'", "'*'", "'+'", "'/'", "'>'", "'<'", "'>='", 
+		"'<='", "'?'", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, "'='"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "REQUIRE_KEY", 
-		"NAME", "VARIABLE", "NUMBER", "LINE_COMMENT", "WHITESPACE", "DOMAIN", 
-		"DOMAIN_NAME", "REQUIREMENTS", "TYPES", "EITHER_TYPE", "CONSTANTS", "FUNCTIONS", 
-		"PREDICATES", "ACTION", "DURATIVE_ACTION", "PROBLEM", "PROBLEM_NAME", 
-		"PROBLEM_DOMAIN", "OBJECTS", "INIT", "FUNC_HEAD", "PRECONDITION", "EFFECT", 
-		"AND_GD", "OR_GD", "NOT_GD", "IMPLY_GD", "EXISTS_GD", "FORALL_GD", "COMPARISON_GD", 
-		"AND_EFFECT", "FORALL_EFFECT", "WHEN_EFFECT", "ASSIGN_EFFECT", "NOT_EFFECT", 
-		"PRED_HEAD", "GOAL", "BINARY_OP", "UNARY_MINUS", "INIT_EQ", "INIT_AT", 
-		"NOT_PRED_INIT", "PRED_INST", "PROBLEM_CONSTRAINT", "PROBLEM_METRIC"
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "REQUIRE_KEY", 
+		"DEFINE", "DOMAIN", "PROBLEM", "REQUIREMENTS", "TYPES", "EITHER", "FUNCTIONS", 
+		"CONSTANTS", "PREDICATES", "CONSTRAINTS", "ACTION", "PARAMETERS", "PRECONDITION", 
+		"EFFECT", "AND", "OR", "NOT", "IMPLY", "EXISTS", "FORALL", "DURATIVE_ACTION", 
+		"DURATION", "CONDITION", "PREFERENCE", "OVER_ALL", "AT_START", "AT_END", 
+		"DERIVED", "WHEN", "ASSIGN", "INCREASE", "DECREASE", "SCALE_UP", "SCALE_DOWN", 
+		"OBJECTS", "INIT", "GOAL", "METRIC", "MINIMIZE", "MAXIMIZE", "TOTAL_TIME", 
+		"IS_VIOLATED", "ALWAYS", "SOMETIME", "WITHIN", "AT_MOST_ONCE", "SOMETIME_AFTER", 
+		"SOMETIME_BEFORE", "ALWAYS_WITHIN", "HOLD_DURING", "HOLD_AFTER", "R_STRIPS", 
+		"R_TYPING", "R_NEGATIVE_PRECONDITIONS", "R_DISJUNCTIVE_PRECONDITIONS", 
+		"R_EQUALITY", "R_EXISTENTIAL_PRECONDITIONS", "R_UNIVERSAL_PRECONDITIONS", 
+		"R_QUANTIFIED_PRECONDITIONS", "R_CONDITIONAL_EFFECTS", "R_FLUENTS", "R_ADL", 
+		"R_DURATIVE_ACTIONS", "R_DERIVED_PREDICATES", "R_TIMED_INITIAL_LITERALS", 
+		"R_PREFERENCES", "R_CONSTRAINTS", "R_ACTION_COSTS", "STR_NUMBER", "NAME", 
+		"VARIABLE", "EQUALS", "NUMBER", "LINE_COMMENT", "WHITESPACE"
 	]
 	public
 	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
@@ -178,18 +170,18 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(148)
+		 	setState(140)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,0, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(146)
+		 		setState(138)
 		 		try domain()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(147)
+		 		setState(139)
 		 		try problem()
 
 		 		break
@@ -206,6 +198,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class DomainContext: ParserRuleContext {
+			open
+			func DEFINE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DEFINE.rawValue, 0)
+			}
 			open
 			func domainName() -> DomainNameContext? {
 				return getRuleContext(DomainNameContext.self, 0)
@@ -269,73 +265,73 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(150)
+		 	setState(142)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(151)
-		 	try match(PDDLParser.Tokens.T__1.rawValue)
-		 	setState(152)
+		 	setState(143)
+		 	try match(PDDLParser.Tokens.DEFINE.rawValue)
+		 	setState(144)
 		 	try domainName()
-		 	setState(154)
+		 	setState(146)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,1,_ctx)) {
 		 	case 1:
-		 		setState(153)
+		 		setState(145)
 		 		try requireDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(157)
+		 	setState(149)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,2,_ctx)) {
 		 	case 1:
-		 		setState(156)
+		 		setState(148)
 		 		try typesDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(160)
+		 	setState(152)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,3,_ctx)) {
 		 	case 1:
-		 		setState(159)
+		 		setState(151)
 		 		try constantsDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(163)
+		 	setState(155)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,4,_ctx)) {
 		 	case 1:
-		 		setState(162)
+		 		setState(154)
 		 		try predicatesDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(166)
+		 	setState(158)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,5,_ctx)) {
 		 	case 1:
-		 		setState(165)
+		 		setState(157)
 		 		try functionsDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(169)
+		 	setState(161)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,6,_ctx)) {
 		 	case 1:
-		 		setState(168)
+		 		setState(160)
 		 		try constraints()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(174)
+		 	setState(166)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -343,16 +339,16 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(171)
+		 		setState(163)
 		 		try structureDef()
 
 
-		 		setState(176)
+		 		setState(168)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(177)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(169)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -366,8 +362,12 @@ open class PDDLParser: Parser {
 
 	public class DomainNameContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func DOMAIN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DOMAIN.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -395,14 +395,14 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(179)
+		 	setState(171)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(180)
-		 	try match(PDDLParser.Tokens.T__3.rawValue)
-		 	setState(181)
-		 	try name()
-		 	setState(182)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(172)
+		 	try match(PDDLParser.Tokens.DOMAIN.rawValue)
+		 	setState(173)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
+		 	setState(174)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -415,6 +415,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class RequireDefContext: ParserRuleContext {
+			open
+			func REQUIREMENTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.REQUIREMENTS.rawValue, 0)
+			}
 			open
 			func REQUIRE_KEY() -> [TerminalNode] {
 				return getTokens(PDDLParser.Tokens.REQUIRE_KEY.rawValue)
@@ -450,19 +454,21 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(184)
+		 	setState(176)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(185)
-		 	try match(PDDLParser.Tokens.T__4.rawValue)
-		 	setState(187) 
+		 	setState(177)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(178)
+		 	try match(PDDLParser.Tokens.REQUIREMENTS.rawValue)
+		 	setState(180) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	repeat {
-		 		setState(186)
+		 		setState(179)
 		 		try match(PDDLParser.Tokens.REQUIRE_KEY.rawValue)
 
 
-		 		setState(189); 
+		 		setState(182); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	} while (//closure
@@ -470,8 +476,8 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.REQUIRE_KEY.rawValue
 		 	      return testSet
 		 	 }())
-		 	setState(191)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(184)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -484,6 +490,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class TypesDefContext: ParserRuleContext {
+			open
+			func TYPES() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.TYPES.rawValue, 0)
+			}
 			open
 			func typedNameList() -> TypedNameListContext? {
 				return getRuleContext(TypedNameListContext.self, 0)
@@ -514,14 +524,16 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(193)
+		 	setState(186)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(194)
-		 	try match(PDDLParser.Tokens.T__5.rawValue)
-		 	setState(195)
-		 	try typedNameList()
-		 	setState(196)
+		 	setState(187)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(188)
+		 	try match(PDDLParser.Tokens.TYPES.rawValue)
+		 	setState(189)
+		 	try typedNameList()
+		 	setState(190)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -535,12 +547,12 @@ open class PDDLParser: Parser {
 
 	public class TypedNameListContext: ParserRuleContext {
 			open
-			func name() -> [NameContext] {
-				return getRuleContexts(NameContext.self)
+			func NAME() -> [TerminalNode] {
+				return getTokens(PDDLParser.Tokens.NAME.rawValue)
 			}
 			open
-			func name(_ i: Int) -> NameContext? {
-				return getRuleContext(NameContext.self, i)
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, i)
 			}
 			open
 			func singleTypeNameList() -> [SingleTypeNameListContext] {
@@ -578,39 +590,36 @@ open class PDDLParser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(215)
+		 	setState(209)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,12, _ctx)) {
 		 	case 1:
-		 		setState(201)
+		 		setState(195)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(198)
-		 			try name()
+		 			setState(192)
+		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 			setState(203)
+		 			setState(197)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
 
 		 		break
 		 	case 2:
-		 		setState(205); 
+		 		setState(199); 
 		 		try _errHandler.sync(self)
 		 		_alt = 1;
 		 		repeat {
 		 			switch (_alt) {
 		 			case 1:
-		 				setState(204)
+		 				setState(198)
 		 				try singleTypeNameList()
 
 
@@ -618,26 +627,23 @@ open class PDDLParser: Parser {
 		 			default:
 		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
-		 			setState(207); 
+		 			setState(201); 
 		 			try _errHandler.sync(self)
 		 			_alt = try getInterpreter().adaptivePredict(_input,10,_ctx)
 		 		} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
-		 		setState(212)
+		 		setState(206)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(209)
-		 			try name()
+		 			setState(203)
+		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 			setState(214)
+		 			setState(208)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
@@ -657,18 +663,18 @@ open class PDDLParser: Parser {
 	}
 
 	public class SingleTypeNameListContext: ParserRuleContext {
-		open var t: R_typeContext!
+		open var t: TypeContext!
 			open
-			func r_type() -> R_typeContext? {
-				return getRuleContext(R_typeContext.self, 0)
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
 			}
 			open
-			func name() -> [NameContext] {
-				return getRuleContexts(NameContext.self)
+			func NAME() -> [TerminalNode] {
+				return getTokens(PDDLParser.Tokens.NAME.rawValue)
 			}
 			open
-			func name(_ i: Int) -> NameContext? {
-				return getRuleContext(NameContext.self, i)
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, i)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -697,30 +703,27 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(218) 
+		 	setState(212) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	repeat {
-		 		setState(217)
-		 		try name()
+		 		setState(211)
+		 		try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 		setState(220); 
+		 		setState(214); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	} while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 	}()
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 	      return testSet
 		 	 }())
-		 	setState(222)
-		 	try match(PDDLParser.Tokens.T__6.rawValue)
-		 	setState(223)
+		 	setState(216)
+		 	try match(PDDLParser.Tokens.T__3.rawValue)
+		 	setState(217)
 		 	try {
-		 			let assignmentValue = try r_type()
+		 			let assignmentValue = try type()
 		 			_localctx.castdown(SingleTypeNameListContext.self).t = assignmentValue
 		 	     }()
 
@@ -736,7 +739,11 @@ open class PDDLParser: Parser {
 		return _localctx
 	}
 
-	public class R_typeContext: ParserRuleContext {
+	public class TypeContext: ParserRuleContext {
+			open
+			func EITHER() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EITHER.rawValue, 0)
+			}
 			open
 			func primType() -> [PrimTypeContext] {
 				return getRuleContexts(PrimTypeContext.self)
@@ -747,68 +754,64 @@ open class PDDLParser: Parser {
 			}
 		override open
 		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_r_type
+			return PDDLParser.RULE_type
 		}
 		override open
 		func enterRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.enterR_type(self)
+				listener.enterType(self)
 			}
 		}
 		override open
 		func exitRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.exitR_type(self)
+				listener.exitType(self)
 			}
 		}
 	}
 	@discardableResult
-	 open func r_type() throws -> R_typeContext {
-		var _localctx: R_typeContext = R_typeContext(_ctx, getState())
-		try enterRule(_localctx, 14, PDDLParser.RULE_r_type)
+	 open func type() throws -> TypeContext {
+		var _localctx: TypeContext = TypeContext(_ctx, getState())
+		try enterRule(_localctx, 14, PDDLParser.RULE_type)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(235)
+		 	setState(229)
 		 	try _errHandler.sync(self)
 		 	switch (PDDLParser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .T__0:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(225)
+		 		setState(219)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(226)
-		 		try match(PDDLParser.Tokens.T__7.rawValue)
-		 		setState(228) 
+		 		setState(220)
+		 		try match(PDDLParser.Tokens.EITHER.rawValue)
+		 		setState(222) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(227)
+		 			setState(221)
 		 			try primType()
 
 
-		 			setState(230); 
+		 			setState(224); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(232)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(226)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 
 		 		break
-		 	case .T__27:fallthrough
-		 	case .T__28:fallthrough
+
 		 	case .NAME:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(234)
+		 		setState(228)
 		 		try primType()
 
 		 		break
@@ -827,8 +830,8 @@ open class PDDLParser: Parser {
 
 	public class PrimTypeContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -856,8 +859,8 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(237)
-		 	try name()
+		 	setState(231)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -870,6 +873,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class FunctionsDefContext: ParserRuleContext {
+			open
+			func FUNCTIONS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FUNCTIONS.rawValue, 0)
+			}
 			open
 			func functionList() -> FunctionListContext? {
 				return getRuleContext(FunctionListContext.self, 0)
@@ -900,14 +907,16 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(239)
+		 	setState(233)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(240)
-		 	try match(PDDLParser.Tokens.T__8.rawValue)
-		 	setState(241)
-		 	try functionList()
-		 	setState(242)
+		 	setState(234)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(235)
+		 	try match(PDDLParser.Tokens.FUNCTIONS.rawValue)
+		 	setState(236)
+		 	try functionList()
+		 	setState(237)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -964,7 +973,7 @@ open class PDDLParser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(255)
+		 	setState(250)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -972,13 +981,13 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(245); 
+		 		setState(240); 
 		 		try _errHandler.sync(self)
 		 		_alt = 1;
 		 		repeat {
 		 			switch (_alt) {
 		 			case 1:
-		 				setState(244)
+		 				setState(239)
 		 				try atomicFunctionSkeleton()
 
 
@@ -986,28 +995,28 @@ open class PDDLParser: Parser {
 		 			default:
 		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
-		 			setState(247); 
+		 			setState(242); 
 		 			try _errHandler.sync(self)
 		 			_alt = try getInterpreter().adaptivePredict(_input,16,_ctx)
 		 		} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
-		 		setState(251)
+		 		setState(246)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__6.rawValue
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__3.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(249)
-		 			try match(PDDLParser.Tokens.T__6.rawValue)
-		 			setState(250)
+		 			setState(244)
+		 			try match(PDDLParser.Tokens.T__3.rawValue)
+		 			setState(245)
 		 			try functionType()
 
 		 		}
 
 
 
-		 		setState(257)
+		 		setState(252)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -1057,14 +1066,14 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(258)
+		 	setState(253)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(259)
+		 	setState(254)
 		 	try functionSymbol()
-		 	setState(260)
+		 	setState(255)
 		 	try typedVariableList()
-		 	setState(261)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(256)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1078,8 +1087,8 @@ open class PDDLParser: Parser {
 
 	public class FunctionSymbolContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -1107,8 +1116,8 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(263)
-		 	try name()
+		 	setState(258)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1121,6 +1130,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class FunctionTypeContext: ParserRuleContext {
+			open
+			func STR_NUMBER() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.STR_NUMBER.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_functionType
@@ -1147,8 +1160,8 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(265)
-		 	try match(PDDLParser.Tokens.T__9.rawValue)
+		 	setState(260)
+		 	try match(PDDLParser.Tokens.STR_NUMBER.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1161,6 +1174,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class ConstantsDefContext: ParserRuleContext {
+			open
+			func CONSTANTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.CONSTANTS.rawValue, 0)
+			}
 			open
 			func typedNameList() -> TypedNameListContext? {
 				return getRuleContext(TypedNameListContext.self, 0)
@@ -1191,14 +1208,16 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(267)
+		 	setState(262)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(268)
-		 	try match(PDDLParser.Tokens.T__10.rawValue)
-		 	setState(269)
-		 	try typedNameList()
-		 	setState(270)
+		 	setState(263)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(264)
+		 	try match(PDDLParser.Tokens.CONSTANTS.rawValue)
+		 	setState(265)
+		 	try typedNameList()
+		 	setState(266)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1211,6 +1230,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class PredicatesDefContext: ParserRuleContext {
+			open
+			func PREDICATES() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PREDICATES.rawValue, 0)
+			}
 			open
 			func atomicFormulaSkeleton() -> [AtomicFormulaSkeletonContext] {
 				return getRuleContexts(AtomicFormulaSkeletonContext.self)
@@ -1246,19 +1269,21 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(272)
+		 	setState(268)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(273)
-		 	try match(PDDLParser.Tokens.T__11.rawValue)
-		 	setState(275) 
+		 	setState(269)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(270)
+		 	try match(PDDLParser.Tokens.PREDICATES.rawValue)
+		 	setState(272) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	repeat {
-		 		setState(274)
+		 		setState(271)
 		 		try atomicFormulaSkeleton()
 
 
-		 		setState(277); 
+		 		setState(274); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	} while (//closure
@@ -1266,8 +1291,8 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }())
-		 	setState(279)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(276)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1314,14 +1339,14 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(281)
+		 	setState(278)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(282)
+		 	setState(279)
 		 	try predicate()
-		 	setState(283)
+		 	setState(280)
 		 	try typedVariableList()
-		 	setState(284)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(281)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1335,8 +1360,8 @@ open class PDDLParser: Parser {
 
 	public class PredicateContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -1364,8 +1389,8 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(286)
-		 	try name()
+		 	setState(283)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1422,11 +1447,11 @@ open class PDDLParser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(305)
+		 	setState(302)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,23, _ctx)) {
 		 	case 1:
-		 		setState(291)
+		 		setState(288)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -1434,24 +1459,24 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(288)
+		 			setState(285)
 		 			try match(PDDLParser.Tokens.VARIABLE.rawValue)
 
 
-		 			setState(293)
+		 			setState(290)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
 
 		 		break
 		 	case 2:
-		 		setState(295); 
+		 		setState(292); 
 		 		try _errHandler.sync(self)
 		 		_alt = 1;
 		 		repeat {
 		 			switch (_alt) {
 		 			case 1:
-		 				setState(294)
+		 				setState(291)
 		 				try singleTypeVarList()
 
 
@@ -1459,11 +1484,11 @@ open class PDDLParser: Parser {
 		 			default:
 		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
-		 			setState(297); 
+		 			setState(294); 
 		 			try _errHandler.sync(self)
 		 			_alt = try getInterpreter().adaptivePredict(_input,21,_ctx)
 		 		} while (_alt != 2 && _alt !=  ATN.INVALID_ALT_NUMBER)
-		 		setState(302)
+		 		setState(299)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -1471,11 +1496,11 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(299)
+		 			setState(296)
 		 			try match(PDDLParser.Tokens.VARIABLE.rawValue)
 
 
-		 			setState(304)
+		 			setState(301)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
@@ -1495,10 +1520,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class SingleTypeVarListContext: ParserRuleContext {
-		open var t: R_typeContext!
+		open var t: TypeContext!
 			open
-			func r_type() -> R_typeContext? {
-				return getRuleContext(R_typeContext.self, 0)
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
 			}
 			open
 			func VARIABLE() -> [TerminalNode] {
@@ -1535,15 +1560,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(308) 
+		 	setState(305) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	repeat {
-		 		setState(307)
+		 		setState(304)
 		 		try match(PDDLParser.Tokens.VARIABLE.rawValue)
 
 
-		 		setState(310); 
+		 		setState(307); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	} while (//closure
@@ -1551,11 +1576,11 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 	      return testSet
 		 	 }())
-		 	setState(312)
-		 	try match(PDDLParser.Tokens.T__6.rawValue)
-		 	setState(313)
+		 	setState(309)
+		 	try match(PDDLParser.Tokens.T__3.rawValue)
+		 	setState(310)
 		 	try {
-		 			let assignmentValue = try r_type()
+		 			let assignmentValue = try type()
 		 			_localctx.castdown(SingleTypeVarListContext.self).t = assignmentValue
 		 	     }()
 
@@ -1572,6 +1597,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class ConstraintsContext: ParserRuleContext {
+			open
+			func CONSTRAINTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.CONSTRAINTS.rawValue, 0)
+			}
 			open
 			func conGD() -> ConGDContext? {
 				return getRuleContext(ConGDContext.self, 0)
@@ -1602,14 +1631,16 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(315)
+		 	setState(312)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(316)
-		 	try match(PDDLParser.Tokens.T__12.rawValue)
-		 	setState(317)
-		 	try conGD()
-		 	setState(318)
+		 	setState(313)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(314)
+		 	try match(PDDLParser.Tokens.CONSTRAINTS.rawValue)
+		 	setState(315)
+		 	try conGD()
+		 	setState(316)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1659,24 +1690,24 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(323)
+		 	setState(321)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,25, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(320)
+		 		setState(318)
 		 		try actionDef()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(321)
+		 		setState(319)
 		 		try durativeActionDef()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(322)
+		 		setState(320)
 		 		try derivedDef()
 
 		 		break
@@ -1694,8 +1725,16 @@ open class PDDLParser: Parser {
 
 	public class ActionDefContext: ParserRuleContext {
 			open
+			func ACTION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.ACTION.rawValue, 0)
+			}
+			open
 			func actionSymbol() -> ActionSymbolContext? {
 				return getRuleContext(ActionSymbolContext.self, 0)
+			}
+			open
+			func PARAMETERS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PARAMETERS.rawValue, 0)
 			}
 			open
 			func typedVariableList() -> TypedVariableListContext? {
@@ -1731,24 +1770,28 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(325)
+		 	setState(323)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
+		 	setState(324)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(325)
+		 	try match(PDDLParser.Tokens.ACTION.rawValue)
 		 	setState(326)
-		 	try match(PDDLParser.Tokens.T__13.rawValue)
-		 	setState(327)
 		 	try actionSymbol()
+		 	setState(327)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
 		 	setState(328)
-		 	try match(PDDLParser.Tokens.T__14.rawValue)
+		 	try match(PDDLParser.Tokens.PARAMETERS.rawValue)
 		 	setState(329)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
 		 	setState(330)
 		 	try typedVariableList()
 		 	setState(331)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 		 	setState(332)
 		 	try actionDefBody()
 		 	setState(333)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1762,8 +1805,8 @@ open class PDDLParser: Parser {
 
 	public class ActionSymbolContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -1792,7 +1835,7 @@ open class PDDLParser: Parser {
 		do {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(335)
-		 	try name()
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1806,8 +1849,16 @@ open class PDDLParser: Parser {
 
 	public class ActionDefBodyContext: ParserRuleContext {
 			open
-			func precondition() -> PreconditionContext? {
-				return getRuleContext(PreconditionContext.self, 0)
+			func PRECONDITION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PRECONDITION.rawValue, 0)
+			}
+			open
+			func EFFECT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EFFECT.rawValue, 0)
+			}
+			open
+			func goalDesc() -> GoalDescContext? {
+				return getRuleContext(GoalDescContext.self, 0)
 			}
 			open
 			func effect() -> EffectContext? {
@@ -1840,60 +1891,61 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(343)
+		 	setState(344)
 		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__15.rawValue
-		 	      return testSet
-		 	 }()) {
+		 	switch (try getInterpreter().adaptivePredict(_input,27,_ctx)) {
+		 	case 1:
 		 		setState(337)
-		 		try match(PDDLParser.Tokens.T__15.rawValue)
-		 		setState(341)
+		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(338)
+		 		try match(PDDLParser.Tokens.PRECONDITION.rawValue)
+		 		setState(342)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,26, _ctx)) {
 		 		case 1:
-		 			setState(338)
-		 			try match(PDDLParser.Tokens.T__0.rawValue)
 		 			setState(339)
-		 			try match(PDDLParser.Tokens.T__2.rawValue)
+		 			try match(PDDLParser.Tokens.T__0.rawValue)
+		 			setState(340)
+		 			try match(PDDLParser.Tokens.T__1.rawValue)
 
 
 		 			break
 		 		case 2:
-		 			setState(340)
-		 			try precondition()
+		 			setState(341)
+		 			try goalDesc()
 
 		 			break
 		 		default: break
 		 		}
 
+		 		break
+		 	default: break
 		 	}
-
-		 	setState(351)
+		 	setState(353)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__16.rawValue
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__2.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(345)
-		 		try match(PDDLParser.Tokens.T__16.rawValue)
-		 		setState(349)
+		 		setState(346)
+		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(347)
+		 		try match(PDDLParser.Tokens.EFFECT.rawValue)
+		 		setState(351)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,28, _ctx)) {
 		 		case 1:
-		 			setState(346)
+		 			setState(348)
 		 			try match(PDDLParser.Tokens.T__0.rawValue)
-		 			setState(347)
-		 			try match(PDDLParser.Tokens.T__2.rawValue)
+		 			setState(349)
+		 			try match(PDDLParser.Tokens.T__1.rawValue)
 
 
 		 			break
 		 		case 2:
-		 			setState(348)
+		 			setState(350)
 		 			try effect()
 
 		 			break
@@ -1913,54 +1965,14 @@ open class PDDLParser: Parser {
 		return _localctx
 	}
 
-	public class PreconditionContext: ParserRuleContext {
-			open
-			func goalDesc() -> GoalDescContext? {
-				return getRuleContext(GoalDescContext.self, 0)
-			}
-		override open
-		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_precondition
-		}
-		override open
-		func enterRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.enterPrecondition(self)
-			}
-		}
-		override open
-		func exitRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.exitPrecondition(self)
-			}
-		}
-	}
-	@discardableResult
-	 open func precondition() throws -> PreconditionContext {
-		var _localctx: PreconditionContext = PreconditionContext(_ctx, getState())
-		try enterRule(_localctx, 50, PDDLParser.RULE_precondition)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(353)
-		 	try goalDesc()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
 	public class GoalDescContext: ParserRuleContext {
 			open
 			func atomicTermFormula() -> AtomicTermFormulaContext? {
 				return getRuleContext(AtomicTermFormulaContext.self, 0)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
 			}
 			open
 			func goalDesc() -> [GoalDescContext] {
@@ -1971,12 +1983,44 @@ open class PDDLParser: Parser {
 				return getRuleContext(GoalDescContext.self, i)
 			}
 			open
+			func OR() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.OR.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func IMPLY() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.IMPLY.rawValue, 0)
+			}
+			open
+			func EXISTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EXISTS.rawValue, 0)
+			}
+			open
 			func typedVariableList() -> TypedVariableListContext? {
 				return getRuleContext(TypedVariableListContext.self, 0)
 			}
 			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
 			func fComp() -> FCompContext? {
 				return getRuleContext(FCompContext.self, 0)
+			}
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EQUALS.rawValue, 0)
+			}
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -1998,13 +2042,13 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func goalDesc() throws -> GoalDescContext {
 		var _localctx: GoalDescContext = GoalDescContext(_ctx, getState())
-		try enterRule(_localctx, 52, PDDLParser.RULE_goalDesc)
+		try enterRule(_localctx, 50, PDDLParser.RULE_goalDesc)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(402)
+		 	setState(408)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,32, _ctx)) {
 		 	case 1:
@@ -2018,7 +2062,7 @@ open class PDDLParser: Parser {
 		 		setState(356)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(357)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
 		 		setState(361)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
@@ -2036,7 +2080,7 @@ open class PDDLParser: Parser {
 		 			_la = try _input.LA(1)
 		 		}
 		 		setState(364)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
@@ -2044,7 +2088,7 @@ open class PDDLParser: Parser {
 		 		setState(365)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(366)
-		 		try match(PDDLParser.Tokens.T__18.rawValue)
+		 		try match(PDDLParser.Tokens.OR.rawValue)
 		 		setState(370)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
@@ -2062,7 +2106,7 @@ open class PDDLParser: Parser {
 		 			_la = try _input.LA(1)
 		 		}
 		 		setState(373)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
@@ -2070,11 +2114,11 @@ open class PDDLParser: Parser {
 		 		setState(374)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(375)
-		 		try match(PDDLParser.Tokens.T__19.rawValue)
+		 		try match(PDDLParser.Tokens.NOT.rawValue)
 		 		setState(376)
 		 		try goalDesc()
 		 		setState(377)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 5:
@@ -2082,13 +2126,13 @@ open class PDDLParser: Parser {
 		 		setState(379)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(380)
-		 		try match(PDDLParser.Tokens.T__20.rawValue)
+		 		try match(PDDLParser.Tokens.IMPLY.rawValue)
 		 		setState(381)
 		 		try goalDesc()
 		 		setState(382)
 		 		try goalDesc()
 		 		setState(383)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 6:
@@ -2096,17 +2140,17 @@ open class PDDLParser: Parser {
 		 		setState(385)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(386)
-		 		try match(PDDLParser.Tokens.T__21.rawValue)
+		 		try match(PDDLParser.Tokens.EXISTS.rawValue)
 		 		setState(387)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(388)
 		 		try typedVariableList()
 		 		setState(389)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 		 		setState(390)
 		 		try goalDesc()
 		 		setState(391)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 7:
@@ -2114,23 +2158,37 @@ open class PDDLParser: Parser {
 		 		setState(393)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(394)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
 		 		setState(395)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(396)
 		 		try typedVariableList()
 		 		setState(397)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 		 		setState(398)
 		 		try goalDesc()
 		 		setState(399)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
 		 		setState(401)
 		 		try fComp()
+
+		 		break
+		 	case 9:
+		 		try enterOuterAlt(_localctx, 9)
+		 		setState(402)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(403)
+		 		try match(PDDLParser.Tokens.EQUALS.rawValue)
+		 		setState(404)
+		 		try term()
+		 		setState(405)
+		 		try term()
+		 		setState(406)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -2178,22 +2236,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func fComp() throws -> FCompContext {
 		var _localctx: FCompContext = FCompContext(_ctx, getState())
-		try enterRule(_localctx, 54, PDDLParser.RULE_fComp)
+		try enterRule(_localctx, 52, PDDLParser.RULE_fComp)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(404)
+		 	setState(410)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(405)
+		 	setState(411)
 		 	try binaryComp()
-		 	setState(406)
+		 	setState(412)
 		 	try fExp()
-		 	setState(407)
+		 	setState(413)
 		 	try fExp()
-		 	setState(408)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(414)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2238,38 +2296,35 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func atomicTermFormula() throws -> AtomicTermFormulaContext {
 		var _localctx: AtomicTermFormulaContext = AtomicTermFormulaContext(_ctx, getState())
-		try enterRule(_localctx, 56, PDDLParser.RULE_atomicTermFormula)
+		try enterRule(_localctx, 54, PDDLParser.RULE_atomicTermFormula)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(410)
+		 	setState(416)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(411)
+		 	setState(417)
 		 	try predicate()
-		 	setState(415)
+		 	setState(421)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue,PDDLParser.Tokens.VARIABLE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 	}()
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(412)
+		 		setState(418)
 		 		try term()
 
 
-		 		setState(417)
+		 		setState(423)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(418)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(424)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2283,8 +2338,8 @@ open class PDDLParser: Parser {
 
 	public class TermContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 			open
 			func VARIABLE() -> TerminalNode? {
@@ -2310,32 +2365,27 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
-		try enterRule(_localctx, 58, PDDLParser.RULE_term)
+		try enterRule(_localctx, 56, PDDLParser.RULE_term)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(422)
-		 	try _errHandler.sync(self)
-		 	switch (PDDLParser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .T__27:fallthrough
-		 	case .T__28:fallthrough
-		 	case .NAME:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(420)
-		 		try name()
-
-		 		break
-
-		 	case .VARIABLE:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(421)
-		 		try match(PDDLParser.Tokens.VARIABLE.rawValue)
-
-		 		break
-		 	default:
-		 		throw ANTLRException.recognition(e: NoViableAltException(self))
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(426)
+		 	_la = try _input.LA(1)
+		 	if (!(//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.VARIABLE.rawValue
+		 	      return testSet
+		 	 }())) {
+		 	try _errHandler.recoverInline(self)
 		 	}
+		 	else {
+		 		_errHandler.reportMatch(self)
+		 		try consume()
+		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -2348,8 +2398,16 @@ open class PDDLParser: Parser {
 
 	public class DurativeActionDefContext: ParserRuleContext {
 			open
+			func DURATIVE_ACTION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DURATIVE_ACTION.rawValue, 0)
+			}
+			open
 			func actionSymbol() -> ActionSymbolContext? {
 				return getRuleContext(ActionSymbolContext.self, 0)
+			}
+			open
+			func PARAMETERS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PARAMETERS.rawValue, 0)
 			}
 			open
 			func typedVariableList() -> TypedVariableListContext? {
@@ -2379,30 +2437,34 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func durativeActionDef() throws -> DurativeActionDefContext {
 		var _localctx: DurativeActionDefContext = DurativeActionDefContext(_ctx, getState())
-		try enterRule(_localctx, 60, PDDLParser.RULE_durativeActionDef)
+		try enterRule(_localctx, 58, PDDLParser.RULE_durativeActionDef)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(424)
-		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(425)
-		 	try match(PDDLParser.Tokens.T__23.rawValue)
-		 	setState(426)
-		 	try actionSymbol()
-		 	setState(427)
-		 	try match(PDDLParser.Tokens.T__14.rawValue)
 		 	setState(428)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
 		 	setState(429)
-		 	try typedVariableList()
-		 	setState(430)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(430)
+		 	try match(PDDLParser.Tokens.DURATIVE_ACTION.rawValue)
 		 	setState(431)
-		 	try daDefBody()
+		 	try actionSymbol()
 		 	setState(432)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(433)
+		 	try match(PDDLParser.Tokens.PARAMETERS.rawValue)
+		 	setState(434)
+		 	try match(PDDLParser.Tokens.T__0.rawValue)
+		 	setState(435)
+		 	try typedVariableList()
+		 	setState(436)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
+		 	setState(437)
+		 	try daDefBody()
+		 	setState(438)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2416,12 +2478,24 @@ open class PDDLParser: Parser {
 
 	public class DaDefBodyContext: ParserRuleContext {
 			open
+			func DURATION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DURATION.rawValue, 0)
+			}
+			open
 			func durationConstraint() -> DurationConstraintContext? {
 				return getRuleContext(DurationConstraintContext.self, 0)
 			}
 			open
+			func CONDITION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.CONDITION.rawValue, 0)
+			}
+			open
 			func daGD() -> DaGDContext? {
 				return getRuleContext(DaGDContext.self, 0)
+			}
+			open
+			func EFFECT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EFFECT.rawValue, 0)
 			}
 			open
 			func daEffect() -> DaEffectContext? {
@@ -2447,57 +2521,78 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func daDefBody() throws -> DaDefBodyContext {
 		var _localctx: DaDefBodyContext = DaDefBodyContext(_ctx, getState())
-		try enterRule(_localctx, 62, PDDLParser.RULE_daDefBody)
+		try enterRule(_localctx, 60, PDDLParser.RULE_daDefBody)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(434)
-		 	try match(PDDLParser.Tokens.T__24.rawValue)
-		 	setState(435)
-		 	try durationConstraint()
-		 	setState(436)
-		 	try match(PDDLParser.Tokens.T__25.rawValue)
-		 	setState(440)
-		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,35, _ctx)) {
-		 	case 1:
-		 		setState(437)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(438)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-
-
-		 		break
-		 	case 2:
-		 		setState(439)
-		 		try daGD()
-
-		 		break
-		 	default: break
-		 	}
-		 	setState(442)
-		 	try match(PDDLParser.Tokens.T__16.rawValue)
-		 	setState(446)
+		 	setState(457)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,36, _ctx)) {
 		 	case 1:
-		 		setState(443)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(444)
+		 		try enterOuterAlt(_localctx, 1)
+		 		setState(440)
 		 		try match(PDDLParser.Tokens.T__2.rawValue)
-
+		 		setState(441)
+		 		try match(PDDLParser.Tokens.DURATION.rawValue)
+		 		setState(442)
+		 		try durationConstraint()
 
 		 		break
 		 	case 2:
-		 		setState(445)
-		 		try daEffect()
+		 		try enterOuterAlt(_localctx, 2)
+		 		setState(443)
+		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(444)
+		 		try match(PDDLParser.Tokens.CONDITION.rawValue)
+		 		setState(448)
+		 		try _errHandler.sync(self)
+		 		switch(try getInterpreter().adaptivePredict(_input,34, _ctx)) {
+		 		case 1:
+		 			setState(445)
+		 			try match(PDDLParser.Tokens.T__0.rawValue)
+		 			setState(446)
+		 			try match(PDDLParser.Tokens.T__1.rawValue)
+
+
+		 			break
+		 		case 2:
+		 			setState(447)
+		 			try daGD()
+
+		 			break
+		 		default: break
+		 		}
+
+		 		break
+		 	case 3:
+		 		try enterOuterAlt(_localctx, 3)
+		 		setState(450)
+		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(451)
+		 		try match(PDDLParser.Tokens.EFFECT.rawValue)
+		 		setState(455)
+		 		try _errHandler.sync(self)
+		 		switch(try getInterpreter().adaptivePredict(_input,35, _ctx)) {
+		 		case 1:
+		 			setState(452)
+		 			try match(PDDLParser.Tokens.T__0.rawValue)
+		 			setState(453)
+		 			try match(PDDLParser.Tokens.T__1.rawValue)
+
+
+		 			break
+		 		case 2:
+		 			setState(454)
+		 			try daEffect()
+
+		 			break
+		 		default: break
+		 		}
 
 		 		break
 		 	default: break
 		 	}
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -2514,12 +2609,20 @@ open class PDDLParser: Parser {
 				return getRuleContext(PrefTimedGDContext.self, 0)
 			}
 			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
+			open
 			func daGD() -> [DaGDContext] {
 				return getRuleContexts(DaGDContext.self)
 			}
 			open
 			func daGD(_ i: Int) -> DaGDContext? {
 				return getRuleContext(DaGDContext.self, i)
+			}
+			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
 			}
 			open
 			func typedVariableList() -> TypedVariableListContext? {
@@ -2545,28 +2648,28 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func daGD() throws -> DaGDContext {
 		var _localctx: DaGDContext = DaGDContext(_ctx, getState())
-		try enterRule(_localctx, 64, PDDLParser.RULE_daGD)
+		try enterRule(_localctx, 62, PDDLParser.RULE_daGD)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(466)
+		 	setState(477)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,38, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(448)
+		 		setState(459)
 		 		try prefTimedGD()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(449)
+		 		setState(460)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(450)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(454)
+		 		setState(461)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(465)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -2574,34 +2677,34 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(451)
+		 			setState(462)
 		 			try daGD()
 
 
-		 			setState(456)
+		 			setState(467)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(457)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(468)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(458)
+		 		setState(469)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(459)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
-		 		setState(460)
+		 		setState(470)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(471)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(461)
+		 		setState(472)
 		 		try typedVariableList()
-		 		setState(462)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(463)
+		 		setState(473)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(474)
 		 		try daGD()
-		 		setState(464)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(475)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -2622,8 +2725,12 @@ open class PDDLParser: Parser {
 				return getRuleContext(TimedGDContext.self, 0)
 			}
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func PREFERENCE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PREFERENCE.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -2645,47 +2752,44 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func prefTimedGD() throws -> PrefTimedGDContext {
 		var _localctx: PrefTimedGDContext = PrefTimedGDContext(_ctx, getState())
-		try enterRule(_localctx, 66, PDDLParser.RULE_prefTimedGD)
+		try enterRule(_localctx, 64, PDDLParser.RULE_prefTimedGD)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(477)
+		 	setState(488)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,40, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(468)
+		 		setState(479)
 		 		try timedGD()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(469)
+		 		setState(480)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(470)
-		 		try match(PDDLParser.Tokens.T__26.rawValue)
-		 		setState(472)
+		 		setState(481)
+		 		try match(PDDLParser.Tokens.PREFERENCE.rawValue)
+		 		setState(483)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(471)
-		 			try name()
+		 			setState(482)
+		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 		 		}
 
-		 		setState(474)
+		 		setState(485)
 		 		try timedGD()
-		 		setState(475)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(486)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -2710,8 +2814,8 @@ open class PDDLParser: Parser {
 				return getRuleContext(GoalDescContext.self, 0)
 			}
 			open
-			func interval() -> IntervalContext? {
-				return getRuleContext(IntervalContext.self, 0)
+			func OVER_ALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.OVER_ALL.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -2733,40 +2837,36 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func timedGD() throws -> TimedGDContext {
 		var _localctx: TimedGDContext = TimedGDContext(_ctx, getState())
-		try enterRule(_localctx, 68, PDDLParser.RULE_timedGD)
+		try enterRule(_localctx, 66, PDDLParser.RULE_timedGD)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(491)
+		 	setState(500)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,41, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(479)
+		 		setState(490)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(480)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(481)
+		 		setState(491)
 		 		try timeSpecifier()
-		 		setState(482)
+		 		setState(492)
 		 		try goalDesc()
-		 		setState(483)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(493)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(485)
+		 		setState(495)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(486)
-		 		try match(PDDLParser.Tokens.T__28.rawValue)
-		 		setState(487)
-		 		try interval()
-		 		setState(488)
+		 		setState(496)
+		 		try match(PDDLParser.Tokens.OVER_ALL.rawValue)
+		 		setState(497)
 		 		try goalDesc()
-		 		setState(489)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(498)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -2782,6 +2882,14 @@ open class PDDLParser: Parser {
 	}
 
 	public class TimeSpecifierContext: ParserRuleContext {
+			open
+			func AT_START() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AT_START.rawValue, 0)
+			}
+			open
+			func AT_END() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AT_END.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_timeSpecifier
@@ -2802,18 +2910,18 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func timeSpecifier() throws -> TimeSpecifierContext {
 		var _localctx: TimeSpecifierContext = TimeSpecifierContext(_ctx, getState())
-		try enterRule(_localctx, 70, PDDLParser.RULE_timeSpecifier)
+		try enterRule(_localctx, 68, PDDLParser.RULE_timeSpecifier)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(493)
+		 	setState(502)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__29.rawValue || _la == PDDLParser.Tokens.T__30.rawValue
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.AT_START.rawValue || _la == PDDLParser.Tokens.AT_END.rawValue
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
@@ -2834,6 +2942,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class IntervalContext: ParserRuleContext {
+			open
+			func OVER_ALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.OVER_ALL.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_interval
@@ -2854,14 +2966,14 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func interval() throws -> IntervalContext {
 		var _localctx: IntervalContext = IntervalContext(_ctx, getState())
-		try enterRule(_localctx, 72, PDDLParser.RULE_interval)
+		try enterRule(_localctx, 70, PDDLParser.RULE_interval)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(495)
-		 	try match(PDDLParser.Tokens.T__31.rawValue)
+		 	setState(504)
+		 	try match(PDDLParser.Tokens.OVER_ALL.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2875,8 +2987,12 @@ open class PDDLParser: Parser {
 
 	public class DerivedDefContext: ParserRuleContext {
 			open
-			func typedVariableList() -> TypedVariableListContext? {
-				return getRuleContext(TypedVariableListContext.self, 0)
+			func DERIVED() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DERIVED.rawValue, 0)
+			}
+			open
+			func atomicFormulaSkeleton() -> AtomicFormulaSkeletonContext? {
+				return getRuleContext(AtomicFormulaSkeletonContext.self, 0)
 			}
 			open
 			func goalDesc() -> GoalDescContext? {
@@ -2902,22 +3018,24 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func derivedDef() throws -> DerivedDefContext {
 		var _localctx: DerivedDefContext = DerivedDefContext(_ctx, getState())
-		try enterRule(_localctx, 74, PDDLParser.RULE_derivedDef)
+		try enterRule(_localctx, 72, PDDLParser.RULE_derivedDef)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(497)
+		 	setState(506)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(498)
-		 	try match(PDDLParser.Tokens.T__32.rawValue)
-		 	setState(499)
-		 	try typedVariableList()
-		 	setState(500)
-		 	try goalDesc()
-		 	setState(501)
+		 	setState(507)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(508)
+		 	try match(PDDLParser.Tokens.DERIVED.rawValue)
+		 	setState(509)
+		 	try atomicFormulaSkeleton()
+		 	setState(510)
+		 	try goalDesc()
+		 	setState(511)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2939,12 +3057,12 @@ open class PDDLParser: Parser {
 				return getRuleContext(BinaryOpContext.self, 0)
 			}
 			open
-			func fExp() -> FExpContext? {
-				return getRuleContext(FExpContext.self, 0)
+			func fExp() -> [FExpContext] {
+				return getRuleContexts(FExpContext.self)
 			}
 			open
-			func fExp2() -> FExp2Context? {
-				return getRuleContext(FExp2Context.self, 0)
+			func fExp(_ i: Int) -> FExpContext? {
+				return getRuleContext(FExpContext.self, i)
 			}
 			open
 			func fHead() -> FHeadContext? {
@@ -2970,98 +3088,54 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func fExp() throws -> FExpContext {
 		var _localctx: FExpContext = FExpContext(_ctx, getState())
-		try enterRule(_localctx, 76, PDDLParser.RULE_fExp)
+		try enterRule(_localctx, 74, PDDLParser.RULE_fExp)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(516)
+		 	setState(526)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,42, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(503)
+		 		setState(513)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(504)
+		 		setState(514)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(505)
+		 		setState(515)
 		 		try binaryOp()
-		 		setState(506)
+		 		setState(516)
 		 		try fExp()
-		 		setState(507)
-		 		try fExp2()
-		 		setState(508)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(517)
+		 		try fExp()
+		 		setState(518)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(510)
+		 		setState(520)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(511)
-		 		try match(PDDLParser.Tokens.T__6.rawValue)
-		 		setState(512)
+		 		setState(521)
+		 		try match(PDDLParser.Tokens.T__3.rawValue)
+		 		setState(522)
 		 		try fExp()
-		 		setState(513)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(523)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(515)
+		 		setState(525)
 		 		try fHead()
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
-	public class FExp2Context: ParserRuleContext {
-			open
-			func fExp() -> FExpContext? {
-				return getRuleContext(FExpContext.self, 0)
-			}
-		override open
-		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_fExp2
-		}
-		override open
-		func enterRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.enterFExp2(self)
-			}
-		}
-		override open
-		func exitRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.exitFExp2(self)
-			}
-		}
-	}
-	@discardableResult
-	 open func fExp2() throws -> FExp2Context {
-		var _localctx: FExp2Context = FExp2Context(_ctx, getState())
-		try enterRule(_localctx, 78, PDDLParser.RULE_fExp2)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(518)
-		 	try fExp()
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -3105,49 +3179,45 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func fHead() throws -> FHeadContext {
 		var _localctx: FHeadContext = FHeadContext(_ctx, getState())
-		try enterRule(_localctx, 80, PDDLParser.RULE_fHead)
+		try enterRule(_localctx, 76, PDDLParser.RULE_fHead)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(531)
+		 	setState(539)
 		 	try _errHandler.sync(self)
 		 	switch (PDDLParser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .T__0:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(520)
+		 		setState(528)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(521)
+		 		setState(529)
 		 		try functionSymbol()
-		 		setState(525)
+		 		setState(533)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue,PDDLParser.Tokens.VARIABLE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(522)
+		 			setState(530)
 		 			try term()
 
 
-		 			setState(527)
+		 			setState(535)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(528)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(536)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
-		 	case .T__27:fallthrough
-		 	case .T__28:fallthrough
+
 		 	case .NAME:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(530)
+		 		setState(538)
 		 		try functionSymbol()
 
 		 		break
@@ -3165,6 +3235,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class EffectContext: ParserRuleContext {
+			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
 			open
 			func cEffect() -> [CEffectContext] {
 				return getRuleContexts(CEffectContext.self)
@@ -3193,22 +3267,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func effect() throws -> EffectContext {
 		var _localctx: EffectContext = EffectContext(_ctx, getState())
-		try enterRule(_localctx, 82, PDDLParser.RULE_effect)
+		try enterRule(_localctx, 78, PDDLParser.RULE_effect)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(543)
+		 	setState(551)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,46, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(533)
+		 		setState(541)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(534)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(538)
+		 		setState(542)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(546)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -3216,21 +3290,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(535)
+		 			setState(543)
 		 			try cEffect()
 
 
-		 			setState(540)
+		 			setState(548)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(541)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(549)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(542)
+		 		setState(550)
 		 		try cEffect()
 
 		 		break
@@ -3248,12 +3322,20 @@ open class PDDLParser: Parser {
 
 	public class CEffectContext: ParserRuleContext {
 			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
 			func typedVariableList() -> TypedVariableListContext? {
 				return getRuleContext(TypedVariableListContext.self, 0)
 			}
 			open
 			func effect() -> EffectContext? {
 				return getRuleContext(EffectContext.self, 0)
+			}
+			open
+			func WHEN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.WHEN.rawValue, 0)
 			}
 			open
 			func goalDesc() -> GoalDescContext? {
@@ -3287,49 +3369,49 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func cEffect() throws -> CEffectContext {
 		var _localctx: CEffectContext = CEffectContext(_ctx, getState())
-		try enterRule(_localctx, 84, PDDLParser.RULE_cEffect)
+		try enterRule(_localctx, 80, PDDLParser.RULE_cEffect)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(560)
+		 	setState(568)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,47, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(545)
+		 		setState(553)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(546)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
-		 		setState(547)
+		 		setState(554)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(555)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(548)
+		 		setState(556)
 		 		try typedVariableList()
-		 		setState(549)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(550)
+		 		setState(557)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(558)
 		 		try effect()
-		 		setState(551)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(559)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(553)
+		 		setState(561)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(554)
-		 		try match(PDDLParser.Tokens.T__33.rawValue)
-		 		setState(555)
+		 		setState(562)
+		 		try match(PDDLParser.Tokens.WHEN.rawValue)
+		 		setState(563)
 		 		try goalDesc()
-		 		setState(556)
+		 		setState(564)
 		 		try condEffect()
-		 		setState(557)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(565)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(559)
+		 		setState(567)
 		 		try pEffect()
 
 		 		break
@@ -3359,6 +3441,10 @@ open class PDDLParser: Parser {
 				return getRuleContext(FExpContext.self, 0)
 			}
 			open
+			func NOT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NOT.rawValue, 0)
+			}
+			open
 			func atomicTermFormula() -> AtomicTermFormulaContext? {
 				return getRuleContext(AtomicTermFormulaContext.self, 0)
 			}
@@ -3382,43 +3468,43 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func pEffect() throws -> PEffectContext {
 		var _localctx: PEffectContext = PEffectContext(_ctx, getState())
-		try enterRule(_localctx, 86, PDDLParser.RULE_pEffect)
+		try enterRule(_localctx, 82, PDDLParser.RULE_pEffect)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(574)
+		 	setState(582)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,48, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(562)
+		 		setState(570)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(563)
+		 		setState(571)
 		 		try assignOp()
-		 		setState(564)
+		 		setState(572)
 		 		try fHead()
-		 		setState(565)
+		 		setState(573)
 		 		try fExp()
-		 		setState(566)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(574)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(568)
+		 		setState(576)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(569)
-		 		try match(PDDLParser.Tokens.T__19.rawValue)
-		 		setState(570)
+		 		setState(577)
+		 		try match(PDDLParser.Tokens.NOT.rawValue)
+		 		setState(578)
 		 		try atomicTermFormula()
-		 		setState(571)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(579)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(573)
+		 		setState(581)
 		 		try atomicTermFormula()
 
 		 		break
@@ -3435,6 +3521,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class CondEffectContext: ParserRuleContext {
+			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
 			open
 			func pEffect() -> [PEffectContext] {
 				return getRuleContexts(PEffectContext.self)
@@ -3463,22 +3553,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func condEffect() throws -> CondEffectContext {
 		var _localctx: CondEffectContext = CondEffectContext(_ctx, getState())
-		try enterRule(_localctx, 88, PDDLParser.RULE_condEffect)
+		try enterRule(_localctx, 84, PDDLParser.RULE_condEffect)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(586)
+		 	setState(594)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,50, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(576)
+		 		setState(584)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(577)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(581)
+		 		setState(585)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(589)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -3486,21 +3576,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(578)
+		 			setState(586)
 		 			try pEffect()
 
 
-		 			setState(583)
+		 			setState(591)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(584)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(592)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(585)
+		 		setState(593)
 		 		try pEffect()
 
 		 		break
@@ -3537,19 +3627,19 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func binaryOp() throws -> BinaryOpContext {
 		var _localctx: BinaryOpContext = BinaryOpContext(_ctx, getState())
-		try enterRule(_localctx, 90, PDDLParser.RULE_binaryOp)
+		try enterRule(_localctx, 86, PDDLParser.RULE_binaryOp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(588)
+		 	setState(596)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__6.rawValue,PDDLParser.Tokens.T__34.rawValue,PDDLParser.Tokens.T__35.rawValue,PDDLParser.Tokens.T__36.rawValue]
+		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__3.rawValue,PDDLParser.Tokens.T__4.rawValue,PDDLParser.Tokens.T__5.rawValue,PDDLParser.Tokens.T__6.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
@@ -3572,6 +3662,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class BinaryCompContext: ParserRuleContext {
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EQUALS.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_binaryComp
@@ -3592,21 +3686,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func binaryComp() throws -> BinaryCompContext {
 		var _localctx: BinaryCompContext = BinaryCompContext(_ctx, getState())
-		try enterRule(_localctx, 92, PDDLParser.RULE_binaryComp)
+		try enterRule(_localctx, 88, PDDLParser.RULE_binaryComp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(590)
+		 	setState(598)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__37.rawValue,PDDLParser.Tokens.T__38.rawValue,PDDLParser.Tokens.T__39.rawValue,PDDLParser.Tokens.T__40.rawValue,PDDLParser.Tokens.T__41.rawValue]
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__7.rawValue,PDDLParser.Tokens.T__8.rawValue,PDDLParser.Tokens.T__9.rawValue,PDDLParser.Tokens.T__10.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
+		 	          testSet = testSet || _la == PDDLParser.Tokens.EQUALS.rawValue
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
@@ -3627,6 +3722,26 @@ open class PDDLParser: Parser {
 	}
 
 	public class AssignOpContext: ParserRuleContext {
+			open
+			func ASSIGN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.ASSIGN.rawValue, 0)
+			}
+			open
+			func SCALE_UP() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.SCALE_UP.rawValue, 0)
+			}
+			open
+			func SCALE_DOWN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.SCALE_DOWN.rawValue, 0)
+			}
+			open
+			func INCREASE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.INCREASE.rawValue, 0)
+			}
+			open
+			func DECREASE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DECREASE.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_assignOp
@@ -3647,19 +3762,19 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func assignOp() throws -> AssignOpContext {
 		var _localctx: AssignOpContext = AssignOpContext(_ctx, getState())
-		try enterRule(_localctx, 94, PDDLParser.RULE_assignOp)
+		try enterRule(_localctx, 90, PDDLParser.RULE_assignOp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(592)
+		 	setState(600)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__42.rawValue,PDDLParser.Tokens.T__43.rawValue,PDDLParser.Tokens.T__44.rawValue,PDDLParser.Tokens.T__45.rawValue,PDDLParser.Tokens.T__46.rawValue]
+		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.ASSIGN.rawValue,PDDLParser.Tokens.INCREASE.rawValue,PDDLParser.Tokens.DECREASE.rawValue,PDDLParser.Tokens.SCALE_UP.rawValue,PDDLParser.Tokens.SCALE_DOWN.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
@@ -3682,6 +3797,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class DurationConstraintContext: ParserRuleContext {
+			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
 			open
 			func simpleDurationConstraint() -> [SimpleDurationConstraintContext] {
 				return getRuleContexts(SimpleDurationConstraintContext.self)
@@ -3710,30 +3829,30 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func durationConstraint() throws -> DurationConstraintContext {
 		var _localctx: DurationConstraintContext = DurationConstraintContext(_ctx, getState())
-		try enterRule(_localctx, 96, PDDLParser.RULE_durationConstraint)
+		try enterRule(_localctx, 92, PDDLParser.RULE_durationConstraint)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(606)
+		 	setState(614)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,52, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(594)
+		 		setState(602)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(595)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(597) 
+		 		setState(603)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(605) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(596)
+		 			setState(604)
 		 			try simpleDurationConstraint()
 
 
-		 			setState(599); 
+		 			setState(607); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
@@ -3741,21 +3860,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(601)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(609)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(603)
+		 		setState(611)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(604)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(612)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(605)
+		 		setState(613)
 		 		try simpleDurationConstraint()
 
 		 		break
@@ -3775,6 +3894,10 @@ open class PDDLParser: Parser {
 			open
 			func durOp() -> DurOpContext? {
 				return getRuleContext(DurOpContext.self, 0)
+			}
+			open
+			func DURATION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DURATION.rawValue, 0)
 			}
 			open
 			func durValue() -> DurValueContext? {
@@ -3808,40 +3931,40 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func simpleDurationConstraint() throws -> SimpleDurationConstraintContext {
 		var _localctx: SimpleDurationConstraintContext = SimpleDurationConstraintContext(_ctx, getState())
-		try enterRule(_localctx, 98, PDDLParser.RULE_simpleDurationConstraint)
+		try enterRule(_localctx, 94, PDDLParser.RULE_simpleDurationConstraint)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(620)
+		 	setState(628)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,53, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(608)
+		 		setState(616)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(609)
+		 		setState(617)
 		 		try durOp()
-		 		setState(610)
-		 		try match(PDDLParser.Tokens.T__47.rawValue)
-		 		setState(611)
+		 		setState(618)
+		 		try match(PDDLParser.Tokens.T__11.rawValue)
+		 		setState(619)
+		 		try match(PDDLParser.Tokens.DURATION.rawValue)
+		 		setState(620)
 		 		try durValue()
-		 		setState(612)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(621)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(614)
+		 		setState(623)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(615)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(616)
+		 		setState(624)
 		 		try timeSpecifier()
-		 		setState(617)
+		 		setState(625)
 		 		try simpleDurationConstraint()
-		 		setState(618)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(626)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -3857,6 +3980,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class DurOpContext: ParserRuleContext {
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EQUALS.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_durOp
@@ -3877,21 +4004,19 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func durOp() throws -> DurOpContext {
 		var _localctx: DurOpContext = DurOpContext(_ctx, getState())
-		try enterRule(_localctx, 100, PDDLParser.RULE_durOp)
+		try enterRule(_localctx, 96, PDDLParser.RULE_durOp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(622)
+		 	setState(630)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__39.rawValue,PDDLParser.Tokens.T__40.rawValue,PDDLParser.Tokens.T__41.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
+		 	      var testSet: Bool = _la == PDDLParser.Tokens.T__9.rawValue || _la == PDDLParser.Tokens.T__10.rawValue
+		 	          testSet = testSet || _la == PDDLParser.Tokens.EQUALS.rawValue
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
@@ -3940,23 +4065,23 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func durValue() throws -> DurValueContext {
 		var _localctx: DurValueContext = DurValueContext(_ctx, getState())
-		try enterRule(_localctx, 102, PDDLParser.RULE_durValue)
+		try enterRule(_localctx, 98, PDDLParser.RULE_durValue)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(626)
+		 	setState(634)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,54, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(624)
+		 		setState(632)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(625)
+		 		setState(633)
 		 		try fExp()
 
 		 		break
@@ -3974,6 +4099,10 @@ open class PDDLParser: Parser {
 
 	public class DaEffectContext: ParserRuleContext {
 			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
+			open
 			func daEffect() -> [DaEffectContext] {
 				return getRuleContexts(DaEffectContext.self)
 			}
@@ -3986,8 +4115,16 @@ open class PDDLParser: Parser {
 				return getRuleContext(TimedEffectContext.self, 0)
 			}
 			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
 			func typedVariableList() -> TypedVariableListContext? {
 				return getRuleContext(TypedVariableListContext.self, 0)
+			}
+			open
+			func WHEN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.WHEN.rawValue, 0)
 			}
 			open
 			func daGD() -> DaGDContext? {
@@ -4025,22 +4162,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func daEffect() throws -> DaEffectContext {
 		var _localctx: DaEffectContext = DaEffectContext(_ctx, getState())
-		try enterRule(_localctx, 104, PDDLParser.RULE_daEffect)
+		try enterRule(_localctx, 100, PDDLParser.RULE_daEffect)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(658)
+		 	setState(666)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,56, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(628)
+		 		setState(636)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(629)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(633)
+		 		setState(637)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(641)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -4048,68 +4185,68 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(630)
+		 			setState(638)
 		 			try daEffect()
 
 
-		 			setState(635)
+		 			setState(643)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(636)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(644)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(637)
+		 		setState(645)
 		 		try timedEffect()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(638)
+		 		setState(646)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(639)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
-		 		setState(640)
+		 		setState(647)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(648)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(641)
+		 		setState(649)
 		 		try typedVariableList()
-		 		setState(642)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(643)
+		 		setState(650)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(651)
 		 		try daEffect()
-		 		setState(644)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(652)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(646)
+		 		setState(654)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(647)
-		 		try match(PDDLParser.Tokens.T__33.rawValue)
-		 		setState(648)
+		 		setState(655)
+		 		try match(PDDLParser.Tokens.WHEN.rawValue)
+		 		setState(656)
 		 		try daGD()
-		 		setState(649)
+		 		setState(657)
 		 		try timedEffect()
-		 		setState(650)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(658)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(652)
+		 		setState(660)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(653)
+		 		setState(661)
 		 		try assignOp()
-		 		setState(654)
+		 		setState(662)
 		 		try fHead()
-		 		setState(655)
+		 		setState(663)
 		 		try fExpDA()
-		 		setState(656)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(664)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -4130,16 +4267,16 @@ open class PDDLParser: Parser {
 				return getRuleContext(TimeSpecifierContext.self, 0)
 			}
 			open
-			func cEffect() -> CEffectContext? {
-				return getRuleContext(CEffectContext.self, 0)
+			func daEffect() -> DaEffectContext? {
+				return getRuleContext(DaEffectContext.self, 0)
 			}
 			open
 			func fAssignDA() -> FAssignDAContext? {
 				return getRuleContext(FAssignDAContext.self, 0)
 			}
 			open
-			func assignOpT() -> AssignOpTContext? {
-				return getRuleContext(AssignOpTContext.self, 0)
+			func assignOp() -> AssignOpContext? {
+				return getRuleContext(AssignOpContext.self, 0)
 			}
 			open
 			func fHead() -> FHeadContext? {
@@ -4169,54 +4306,50 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func timedEffect() throws -> TimedEffectContext {
 		var _localctx: TimedEffectContext = TimedEffectContext(_ctx, getState())
-		try enterRule(_localctx, 106, PDDLParser.RULE_timedEffect)
+		try enterRule(_localctx, 102, PDDLParser.RULE_timedEffect)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(678)
+		 	setState(684)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,57, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(660)
+		 		setState(668)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(661)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(662)
+		 		setState(669)
 		 		try timeSpecifier()
-		 		setState(663)
-		 		try cEffect()
-		 		setState(664)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(670)
+		 		try daEffect()
+		 		setState(671)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(666)
+		 		setState(673)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(667)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(668)
+		 		setState(674)
 		 		try timeSpecifier()
-		 		setState(669)
+		 		setState(675)
 		 		try fAssignDA()
-		 		setState(670)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(676)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(672)
+		 		setState(678)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(673)
-		 		try assignOpT()
-		 		setState(674)
+		 		setState(679)
+		 		try assignOp()
+		 		setState(680)
 		 		try fHead()
-		 		setState(675)
+		 		setState(681)
 		 		try fExp()
-		 		setState(676)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(682)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -4264,22 +4397,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func fAssignDA() throws -> FAssignDAContext {
 		var _localctx: FAssignDAContext = FAssignDAContext(_ctx, getState())
-		try enterRule(_localctx, 108, PDDLParser.RULE_fAssignDA)
+		try enterRule(_localctx, 104, PDDLParser.RULE_fAssignDA)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(680)
+		 	setState(686)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(681)
+		 	setState(687)
 		 	try assignOp()
-		 	setState(682)
+		 	setState(688)
 		 	try fHead()
-		 	setState(683)
+		 	setState(689)
 		 	try fExpDA()
-		 	setState(684)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(690)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4305,6 +4438,10 @@ open class PDDLParser: Parser {
 				return getRuleContext(FExpDAContext.self, i)
 			}
 			open
+			func DURATION() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DURATION.rawValue, 0)
+			}
+			open
 			func fExp() -> FExpContext? {
 				return getRuleContext(FExpContext.self, 0)
 			}
@@ -4328,54 +4465,56 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func fExpDA() throws -> FExpDAContext {
 		var _localctx: FExpDAContext = FExpDAContext(_ctx, getState())
-		try enterRule(_localctx, 110, PDDLParser.RULE_fExpDA)
+		try enterRule(_localctx, 106, PDDLParser.RULE_fExpDA)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(699)
+		 	setState(706)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,59, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(686)
+		 		setState(692)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(693)
+		 		setState(699)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,58, _ctx)) {
 		 		case 1:
-		 			setState(687)
+		 			setState(693)
 		 			try binaryOp()
-		 			setState(688)
+		 			setState(694)
 		 			try fExpDA()
-		 			setState(689)
+		 			setState(695)
 		 			try fExpDA()
 
 
 		 			break
 		 		case 2:
-		 			setState(691)
-		 			try match(PDDLParser.Tokens.T__6.rawValue)
-		 			setState(692)
+		 			setState(697)
+		 			try match(PDDLParser.Tokens.T__3.rawValue)
+		 			setState(698)
 		 			try fExpDA()
 
 
 		 			break
 		 		default: break
 		 		}
-		 		setState(695)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(701)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(697)
-		 		try match(PDDLParser.Tokens.T__47.rawValue)
+		 		setState(703)
+		 		try match(PDDLParser.Tokens.T__11.rawValue)
+		 		setState(704)
+		 		try match(PDDLParser.Tokens.DURATION.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(698)
+		 		setState(705)
 		 		try fExp()
 
 		 		break
@@ -4391,59 +4530,11 @@ open class PDDLParser: Parser {
 		return _localctx
 	}
 
-	public class AssignOpTContext: ParserRuleContext {
-		override open
-		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_assignOpT
-		}
-		override open
-		func enterRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.enterAssignOpT(self)
-			}
-		}
-		override open
-		func exitRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.exitAssignOpT(self)
-			}
-		}
-	}
-	@discardableResult
-	 open func assignOpT() throws -> AssignOpTContext {
-		var _localctx: AssignOpTContext = AssignOpTContext(_ctx, getState())
-		try enterRule(_localctx, 112, PDDLParser.RULE_assignOpT)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(701)
-		 	_la = try _input.LA(1)
-		 	if (!(//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__45.rawValue || _la == PDDLParser.Tokens.T__46.rawValue
-		 	      return testSet
-		 	 }())) {
-		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
-		 		try consume()
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
 	public class ProblemContext: ParserRuleContext {
+			open
+			func DEFINE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DEFINE.rawValue, 0)
+			}
 			open
 			func problemDecl() -> ProblemDeclContext? {
 				return getRuleContext(ProblemDeclContext.self, 0)
@@ -4453,8 +4544,8 @@ open class PDDLParser: Parser {
 				return getRuleContext(ProblemDomainContext.self, 0)
 			}
 			open
-			func initstate() -> InitstateContext? {
-				return getRuleContext(InitstateContext.self, 0)
+			func initState() -> InitStateContext? {
+				return getRuleContext(InitStateContext.self, 0)
 			}
 			open
 			func goal() -> GoalContext? {
@@ -4496,56 +4587,56 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func problem() throws -> ProblemContext {
 		var _localctx: ProblemContext = ProblemContext(_ctx, getState())
-		try enterRule(_localctx, 114, PDDLParser.RULE_problem)
+		try enterRule(_localctx, 108, PDDLParser.RULE_problem)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(703)
-		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(704)
-		 	try match(PDDLParser.Tokens.T__1.rawValue)
-		 	setState(705)
-		 	try problemDecl()
-		 	setState(706)
-		 	try problemDomain()
 		 	setState(708)
+		 	try match(PDDLParser.Tokens.T__0.rawValue)
+		 	setState(709)
+		 	try match(PDDLParser.Tokens.DEFINE.rawValue)
+		 	setState(710)
+		 	try problemDecl()
+		 	setState(711)
+		 	try problemDomain()
+		 	setState(713)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,60,_ctx)) {
 		 	case 1:
-		 		setState(707)
+		 		setState(712)
 		 		try requireDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(711)
+		 	setState(716)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,61,_ctx)) {
 		 	case 1:
-		 		setState(710)
+		 		setState(715)
 		 		try objectDecl()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(713)
-		 	try initstate()
-		 	setState(714)
+		 	setState(718)
+		 	try initState()
+		 	setState(719)
 		 	try goal()
-		 	setState(716)
+		 	setState(721)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,62,_ctx)) {
 		 	case 1:
-		 		setState(715)
+		 		setState(720)
 		 		try probConstraints()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(719)
+		 	setState(724)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4553,13 +4644,13 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(718)
+		 		setState(723)
 		 		try metricSpec()
 
 		 	}
 
-		 	setState(721)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(726)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4573,8 +4664,12 @@ open class PDDLParser: Parser {
 
 	public class ProblemDeclContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func PROBLEM() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PROBLEM.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -4596,20 +4691,20 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func problemDecl() throws -> ProblemDeclContext {
 		var _localctx: ProblemDeclContext = ProblemDeclContext(_ctx, getState())
-		try enterRule(_localctx, 116, PDDLParser.RULE_problemDecl)
+		try enterRule(_localctx, 110, PDDLParser.RULE_problemDecl)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(723)
+		 	setState(728)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(724)
-		 	try match(PDDLParser.Tokens.T__48.rawValue)
-		 	setState(725)
-		 	try name()
-		 	setState(726)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(729)
+		 	try match(PDDLParser.Tokens.PROBLEM.rawValue)
+		 	setState(730)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
+		 	setState(731)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4623,8 +4718,12 @@ open class PDDLParser: Parser {
 
 	public class ProblemDomainContext: ParserRuleContext {
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func DOMAIN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.DOMAIN.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -4646,20 +4745,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func problemDomain() throws -> ProblemDomainContext {
 		var _localctx: ProblemDomainContext = ProblemDomainContext(_ctx, getState())
-		try enterRule(_localctx, 118, PDDLParser.RULE_problemDomain)
+		try enterRule(_localctx, 112, PDDLParser.RULE_problemDomain)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(728)
+		 	setState(733)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(729)
-		 	try match(PDDLParser.Tokens.T__49.rawValue)
-		 	setState(730)
-		 	try name()
-		 	setState(731)
+		 	setState(734)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(735)
+		 	try match(PDDLParser.Tokens.DOMAIN.rawValue)
+		 	setState(736)
+		 	try match(PDDLParser.Tokens.NAME.rawValue)
+		 	setState(737)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4672,6 +4773,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class ObjectDeclContext: ParserRuleContext {
+			open
+			func OBJECTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.OBJECTS.rawValue, 0)
+			}
 			open
 			func typedNameList() -> TypedNameListContext? {
 				return getRuleContext(TypedNameListContext.self, 0)
@@ -4696,20 +4801,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func objectDecl() throws -> ObjectDeclContext {
 		var _localctx: ObjectDeclContext = ObjectDeclContext(_ctx, getState())
-		try enterRule(_localctx, 120, PDDLParser.RULE_objectDecl)
+		try enterRule(_localctx, 114, PDDLParser.RULE_objectDecl)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(733)
+		 	setState(739)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(734)
-		 	try match(PDDLParser.Tokens.T__50.rawValue)
-		 	setState(735)
-		 	try typedNameList()
-		 	setState(736)
+		 	setState(740)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(741)
+		 	try match(PDDLParser.Tokens.OBJECTS.rawValue)
+		 	setState(742)
+		 	try typedNameList()
+		 	setState(743)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4721,7 +4828,11 @@ open class PDDLParser: Parser {
 		return _localctx
 	}
 
-	public class InitstateContext: ParserRuleContext {
+	public class InitStateContext: ParserRuleContext {
+			open
+			func INIT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.INIT.rawValue, 0)
+			}
 			open
 			func initEl() -> [InitElContext] {
 				return getRuleContexts(InitElContext.self)
@@ -4732,36 +4843,38 @@ open class PDDLParser: Parser {
 			}
 		override open
 		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_initstate
+			return PDDLParser.RULE_initState
 		}
 		override open
 		func enterRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.enterInitstate(self)
+				listener.enterInitState(self)
 			}
 		}
 		override open
 		func exitRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.exitInitstate(self)
+				listener.exitInitState(self)
 			}
 		}
 	}
 	@discardableResult
-	 open func initstate() throws -> InitstateContext {
-		var _localctx: InitstateContext = InitstateContext(_ctx, getState())
-		try enterRule(_localctx, 122, PDDLParser.RULE_initstate)
+	 open func initState() throws -> InitStateContext {
+		var _localctx: InitStateContext = InitStateContext(_ctx, getState())
+		try enterRule(_localctx, 116, PDDLParser.RULE_initState)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(738)
+		 	setState(745)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(739)
-		 	try match(PDDLParser.Tokens.T__51.rawValue)
-		 	setState(743)
+		 	setState(746)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(747)
+		 	try match(PDDLParser.Tokens.INIT.rawValue)
+		 	setState(751)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -4769,16 +4882,16 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(740)
+		 		setState(748)
 		 		try initEl()
 
 
-		 		setState(745)
+		 		setState(753)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(746)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(754)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4794,6 +4907,10 @@ open class PDDLParser: Parser {
 			open
 			func nameLiteral() -> NameLiteralContext? {
 				return getRuleContext(NameLiteralContext.self, 0)
+			}
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.EQUALS.rawValue, 0)
 			}
 			open
 			func fHead() -> FHeadContext? {
@@ -4823,46 +4940,44 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func initEl() throws -> InitElContext {
 		var _localctx: InitElContext = InitElContext(_ctx, getState())
-		try enterRule(_localctx, 124, PDDLParser.RULE_initEl)
+		try enterRule(_localctx, 118, PDDLParser.RULE_initEl)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(761)
+		 	setState(768)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,65, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(748)
+		 		setState(756)
 		 		try nameLiteral()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(749)
+		 		setState(757)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(750)
-		 		try match(PDDLParser.Tokens.T__39.rawValue)
-		 		setState(751)
+		 		setState(758)
+		 		try match(PDDLParser.Tokens.EQUALS.rawValue)
+		 		setState(759)
 		 		try fHead()
-		 		setState(752)
+		 		setState(760)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(753)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(761)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(755)
+		 		setState(763)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(756)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(757)
+		 		setState(764)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(758)
+		 		setState(765)
 		 		try nameLiteral()
-		 		setState(759)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(766)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -4881,6 +4996,10 @@ open class PDDLParser: Parser {
 			open
 			func atomicNameFormula() -> AtomicNameFormulaContext? {
 				return getRuleContext(AtomicNameFormulaContext.self, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NOT.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -4902,30 +5021,30 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func nameLiteral() throws -> NameLiteralContext {
 		var _localctx: NameLiteralContext = NameLiteralContext(_ctx, getState())
-		try enterRule(_localctx, 126, PDDLParser.RULE_nameLiteral)
+		try enterRule(_localctx, 120, PDDLParser.RULE_nameLiteral)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(769)
+		 	setState(776)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,66, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(763)
+		 		setState(770)
 		 		try atomicNameFormula()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(764)
+		 		setState(771)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(765)
-		 		try match(PDDLParser.Tokens.T__19.rawValue)
-		 		setState(766)
+		 		setState(772)
+		 		try match(PDDLParser.Tokens.NOT.rawValue)
+		 		setState(773)
 		 		try atomicNameFormula()
-		 		setState(767)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(774)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -4946,12 +5065,12 @@ open class PDDLParser: Parser {
 				return getRuleContext(PredicateContext.self, 0)
 			}
 			open
-			func name() -> [NameContext] {
-				return getRuleContexts(NameContext.self)
+			func NAME() -> [TerminalNode] {
+				return getTokens(PDDLParser.Tokens.NAME.rawValue)
 			}
 			open
-			func name(_ i: Int) -> NameContext? {
-				return getRuleContext(NameContext.self, i)
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, i)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -4973,38 +5092,35 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func atomicNameFormula() throws -> AtomicNameFormulaContext {
 		var _localctx: AtomicNameFormulaContext = AtomicNameFormulaContext(_ctx, getState())
-		try enterRule(_localctx, 128, PDDLParser.RULE_atomicNameFormula)
+		try enterRule(_localctx, 122, PDDLParser.RULE_atomicNameFormula)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(771)
+		 	setState(778)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(772)
+		 	setState(779)
 		 	try predicate()
-		 	setState(776)
+		 	setState(783)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 	}()
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(773)
-		 		try name()
+		 		setState(780)
+		 		try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 		setState(778)
+		 		setState(785)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(779)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(786)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5017,6 +5133,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class GoalContext: ParserRuleContext {
+			open
+			func GOAL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.GOAL.rawValue, 0)
+			}
 			open
 			func goalDesc() -> GoalDescContext? {
 				return getRuleContext(GoalDescContext.self, 0)
@@ -5041,20 +5161,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func goal() throws -> GoalContext {
 		var _localctx: GoalContext = GoalContext(_ctx, getState())
-		try enterRule(_localctx, 130, PDDLParser.RULE_goal)
+		try enterRule(_localctx, 124, PDDLParser.RULE_goal)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(781)
+		 	setState(788)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(782)
-		 	try match(PDDLParser.Tokens.T__52.rawValue)
-		 	setState(783)
-		 	try goalDesc()
-		 	setState(784)
+		 	setState(789)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(790)
+		 	try match(PDDLParser.Tokens.GOAL.rawValue)
+		 	setState(791)
+		 	try goalDesc()
+		 	setState(792)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5067,6 +5189,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class ProbConstraintsContext: ParserRuleContext {
+			open
+			func CONSTRAINTS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.CONSTRAINTS.rawValue, 0)
+			}
 			open
 			func prefConGD() -> PrefConGDContext? {
 				return getRuleContext(PrefConGDContext.self, 0)
@@ -5091,20 +5217,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func probConstraints() throws -> ProbConstraintsContext {
 		var _localctx: ProbConstraintsContext = ProbConstraintsContext(_ctx, getState())
-		try enterRule(_localctx, 132, PDDLParser.RULE_probConstraints)
+		try enterRule(_localctx, 126, PDDLParser.RULE_probConstraints)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(786)
+		 	setState(794)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(787)
-		 	try match(PDDLParser.Tokens.T__12.rawValue)
-		 	setState(788)
-		 	try prefConGD()
-		 	setState(789)
+		 	setState(795)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(796)
+		 	try match(PDDLParser.Tokens.CONSTRAINTS.rawValue)
+		 	setState(797)
+		 	try prefConGD()
+		 	setState(798)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5118,6 +5246,10 @@ open class PDDLParser: Parser {
 
 	public class PrefConGDContext: ParserRuleContext {
 			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
+			open
 			func prefConGD() -> [PrefConGDContext] {
 				return getRuleContexts(PrefConGDContext.self)
 			}
@@ -5126,16 +5258,24 @@ open class PDDLParser: Parser {
 				return getRuleContext(PrefConGDContext.self, i)
 			}
 			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
 			func typedVariableList() -> TypedVariableListContext? {
 				return getRuleContext(TypedVariableListContext.self, 0)
+			}
+			open
+			func PREFERENCE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PREFERENCE.rawValue, 0)
 			}
 			open
 			func conGD() -> ConGDContext? {
 				return getRuleContext(ConGDContext.self, 0)
 			}
 			open
-			func name() -> NameContext? {
-				return getRuleContext(NameContext.self, 0)
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -5157,22 +5297,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func prefConGD() throws -> PrefConGDContext {
 		var _localctx: PrefConGDContext = PrefConGDContext(_ctx, getState())
-		try enterRule(_localctx, 134, PDDLParser.RULE_prefConGD)
+		try enterRule(_localctx, 128, PDDLParser.RULE_prefConGD)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(817)
+		 	setState(826)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,70, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(791)
+		 		setState(800)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(792)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(796)
+		 		setState(801)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(805)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -5180,67 +5320,64 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(793)
+		 			setState(802)
 		 			try prefConGD()
 
 
-		 			setState(798)
+		 			setState(807)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(799)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(808)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(800)
+		 		setState(809)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(801)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
-		 		setState(802)
+		 		setState(810)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(811)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(803)
+		 		setState(812)
 		 		try typedVariableList()
-		 		setState(804)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(805)
+		 		setState(813)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(814)
 		 		try prefConGD()
-		 		setState(806)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(815)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(808)
+		 		setState(817)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(809)
-		 		try match(PDDLParser.Tokens.T__26.rawValue)
-		 		setState(811)
+		 		setState(818)
+		 		try match(PDDLParser.Tokens.PREFERENCE.rawValue)
+		 		setState(820)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(810)
-		 			try name()
+		 			setState(819)
+		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 		 		}
 
-		 		setState(813)
+		 		setState(822)
 		 		try conGD()
-		 		setState(814)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(823)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(816)
+		 		setState(825)
 		 		try conGD()
 
 		 		break
@@ -5257,6 +5394,10 @@ open class PDDLParser: Parser {
 	}
 
 	public class MetricSpecContext: ParserRuleContext {
+			open
+			func METRIC() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.METRIC.rawValue, 0)
+			}
 			open
 			func optimization() -> OptimizationContext? {
 				return getRuleContext(OptimizationContext.self, 0)
@@ -5285,22 +5426,24 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func metricSpec() throws -> MetricSpecContext {
 		var _localctx: MetricSpecContext = MetricSpecContext(_ctx, getState())
-		try enterRule(_localctx, 136, PDDLParser.RULE_metricSpec)
+		try enterRule(_localctx, 130, PDDLParser.RULE_metricSpec)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(819)
+		 	setState(828)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(820)
-		 	try match(PDDLParser.Tokens.T__53.rawValue)
-		 	setState(821)
-		 	try optimization()
-		 	setState(822)
-		 	try metricFExp()
-		 	setState(823)
+		 	setState(829)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(830)
+		 	try match(PDDLParser.Tokens.METRIC.rawValue)
+		 	setState(831)
+		 	try optimization()
+		 	setState(832)
+		 	try metricFExp()
+		 	setState(833)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5313,6 +5456,14 @@ open class PDDLParser: Parser {
 	}
 
 	public class OptimizationContext: ParserRuleContext {
+			open
+			func MINIMIZE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.MINIMIZE.rawValue, 0)
+			}
+			open
+			func MAXIMIZE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.MAXIMIZE.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_optimization
@@ -5333,18 +5484,18 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func optimization() throws -> OptimizationContext {
 		var _localctx: OptimizationContext = OptimizationContext(_ctx, getState())
-		try enterRule(_localctx, 138, PDDLParser.RULE_optimization)
+		try enterRule(_localctx, 132, PDDLParser.RULE_optimization)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(825)
+		 	setState(835)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__54.rawValue || _la == PDDLParser.Tokens.T__55.rawValue
+		 	      let testSet: Bool = _la == PDDLParser.Tokens.MINIMIZE.rawValue || _la == PDDLParser.Tokens.MAXIMIZE.rawValue
 		 	      return testSet
 		 	 }())) {
 		 	try _errHandler.recoverInline(self)
@@ -5386,12 +5537,20 @@ open class PDDLParser: Parser {
 				return getRuleContext(FunctionSymbolContext.self, 0)
 			}
 			open
-			func name() -> [NameContext] {
-				return getRuleContexts(NameContext.self)
+			func NAME() -> [TerminalNode] {
+				return getTokens(PDDLParser.Tokens.NAME.rawValue)
 			}
 			open
-			func name(_ i: Int) -> NameContext? {
-				return getRuleContext(NameContext.self, i)
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, i)
+			}
+			open
+			func TOTAL_TIME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.TOTAL_TIME.rawValue, 0)
+			}
+			open
+			func IS_VIOLATED() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.IS_VIOLATED.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -5413,38 +5572,38 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func metricFExp() throws -> MetricFExpContext {
 		var _localctx: MetricFExpContext = MetricFExpContext(_ctx, getState())
-		try enterRule(_localctx, 140, PDDLParser.RULE_metricFExp)
+		try enterRule(_localctx, 134, PDDLParser.RULE_metricFExp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(866)
+		 	setState(875)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,73, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(827)
+		 		setState(837)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(828)
+		 		setState(838)
 		 		try binaryOp()
-		 		setState(829)
+		 		setState(839)
 		 		try metricFExp()
-		 		setState(830)
+		 		setState(840)
 		 		try metricFExp()
-		 		setState(831)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(841)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(833)
+		 		setState(843)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(834)
+		 		setState(844)
 		 		_la = try _input.LA(1)
 		 		if (!(//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__34.rawValue || _la == PDDLParser.Tokens.T__36.rawValue
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__4.rawValue || _la == PDDLParser.Tokens.T__6.rawValue
 		 		      return testSet
 		 		 }())) {
 		 		try _errHandler.recoverInline(self)
@@ -5453,101 +5612,95 @@ open class PDDLParser: Parser {
 		 			_errHandler.reportMatch(self)
 		 			try consume()
 		 		}
-		 		setState(835)
+		 		setState(845)
 		 		try metricFExp()
-		 		setState(837) 
+		 		setState(847) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(836)
+		 			setState(846)
 		 			try metricFExp()
 
 
-		 			setState(839); 
+		 			setState(849); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
 		 		 { () -> Bool in
-		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__0.rawValue,PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.T__56.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 		}()
+		 		      var testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue || _la == PDDLParser.Tokens.TOTAL_TIME.rawValue
 		 		          testSet = testSet || _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.NUMBER.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(841)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(851)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(843)
+		 		setState(853)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(844)
-		 		try match(PDDLParser.Tokens.T__6.rawValue)
-		 		setState(845)
+		 		setState(854)
+		 		try match(PDDLParser.Tokens.T__3.rawValue)
+		 		setState(855)
 		 		try metricFExp()
-		 		setState(846)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(856)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(848)
+		 		setState(858)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(849)
+		 		setState(859)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(850)
+		 		setState(860)
 		 		try functionSymbol()
-		 		setState(854)
+		 		setState(864)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 		}()
+		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(851)
-		 			try name()
+		 			setState(861)
+		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 			setState(856)
+		 			setState(866)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(857)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(867)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(859)
+		 		setState(869)
 		 		try functionSymbol()
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(860)
-		 		try match(PDDLParser.Tokens.T__56.rawValue)
+		 		setState(870)
+		 		try match(PDDLParser.Tokens.TOTAL_TIME.rawValue)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(861)
+		 		setState(871)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(862)
-		 		try match(PDDLParser.Tokens.T__57.rawValue)
-		 		setState(863)
-		 		try name()
-		 		setState(864)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(872)
+		 		try match(PDDLParser.Tokens.IS_VIOLATED.rawValue)
+		 		setState(873)
+		 		try match(PDDLParser.Tokens.NAME.rawValue)
+		 		setState(874)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
@@ -5564,6 +5717,10 @@ open class PDDLParser: Parser {
 
 	public class ConGDContext: ParserRuleContext {
 			open
+			func AND() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AND.rawValue, 0)
+			}
+			open
 			func conGD() -> [ConGDContext] {
 				return getRuleContexts(ConGDContext.self)
 			}
@@ -5572,8 +5729,16 @@ open class PDDLParser: Parser {
 				return getRuleContext(ConGDContext.self, i)
 			}
 			open
+			func FORALL() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
 			func typedVariableList() -> TypedVariableListContext? {
 				return getRuleContext(TypedVariableListContext.self, 0)
+			}
+			open
+			func AT_END() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AT_END.rawValue, 0)
 			}
 			open
 			func goalDesc() -> [GoalDescContext] {
@@ -5584,12 +5749,48 @@ open class PDDLParser: Parser {
 				return getRuleContext(GoalDescContext.self, i)
 			}
 			open
+			func ALWAYS() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.ALWAYS.rawValue, 0)
+			}
+			open
+			func SOMETIME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.SOMETIME.rawValue, 0)
+			}
+			open
+			func WITHIN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.WITHIN.rawValue, 0)
+			}
+			open
 			func NUMBER() -> [TerminalNode] {
 				return getTokens(PDDLParser.Tokens.NUMBER.rawValue)
 			}
 			open
 			func NUMBER(_ i:Int) -> TerminalNode? {
 				return getToken(PDDLParser.Tokens.NUMBER.rawValue, i)
+			}
+			open
+			func AT_MOST_ONCE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.AT_MOST_ONCE.rawValue, 0)
+			}
+			open
+			func SOMETIME_AFTER() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.SOMETIME_AFTER.rawValue, 0)
+			}
+			open
+			func SOMETIME_BEFORE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.SOMETIME_BEFORE.rawValue, 0)
+			}
+			open
+			func ALWAYS_WITHIN() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.ALWAYS_WITHIN.rawValue, 0)
+			}
+			open
+			func HOLD_DURING() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.HOLD_DURING.rawValue, 0)
+			}
+			open
+			func HOLD_AFTER() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.HOLD_AFTER.rawValue, 0)
 			}
 		override open
 		func getRuleIndex() -> Int {
@@ -5611,22 +5812,22 @@ open class PDDLParser: Parser {
 	@discardableResult
 	 open func conGD() throws -> ConGDContext {
 		var _localctx: ConGDContext = ConGDContext(_ctx, getState())
-		try enterRule(_localctx, 142, PDDLParser.RULE_conGD)
+		try enterRule(_localctx, 136, PDDLParser.RULE_conGD)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(944)
+		 	setState(952)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,75, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(868)
+		 		setState(877)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(869)
-		 		try match(PDDLParser.Tokens.T__17.rawValue)
-		 		setState(873)
+		 		setState(878)
+		 		try match(PDDLParser.Tokens.AND.rawValue)
+		 		setState(882)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -5634,235 +5835,174 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(870)
+		 			setState(879)
 		 			try conGD()
 
 
-		 			setState(875)
+		 			setState(884)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(876)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(885)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(877)
+		 		setState(886)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(878)
-		 		try match(PDDLParser.Tokens.T__22.rawValue)
-		 		setState(879)
+		 		setState(887)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(888)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(880)
+		 		setState(889)
 		 		try typedVariableList()
-		 		setState(881)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(882)
+		 		setState(890)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(891)
 		 		try conGD()
-		 		setState(883)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(892)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(885)
+		 		setState(894)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(886)
-		 		try match(PDDLParser.Tokens.T__27.rawValue)
-		 		setState(887)
-		 		try match(PDDLParser.Tokens.T__30.rawValue)
-		 		setState(888)
+		 		setState(895)
+		 		try match(PDDLParser.Tokens.AT_END.rawValue)
+		 		setState(896)
 		 		try goalDesc()
-		 		setState(889)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(897)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(891)
+		 		setState(899)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(892)
-		 		try match(PDDLParser.Tokens.T__58.rawValue)
-		 		setState(893)
+		 		setState(900)
+		 		try match(PDDLParser.Tokens.ALWAYS.rawValue)
+		 		setState(901)
 		 		try goalDesc()
-		 		setState(894)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(902)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(896)
+		 		setState(904)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(897)
-		 		try match(PDDLParser.Tokens.T__59.rawValue)
-		 		setState(898)
+		 		setState(905)
+		 		try match(PDDLParser.Tokens.SOMETIME.rawValue)
+		 		setState(906)
 		 		try goalDesc()
-		 		setState(899)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(907)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(901)
+		 		setState(909)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(902)
-		 		try match(PDDLParser.Tokens.T__60.rawValue)
-		 		setState(903)
+		 		setState(910)
+		 		try match(PDDLParser.Tokens.WITHIN.rawValue)
+		 		setState(911)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(904)
+		 		setState(912)
 		 		try goalDesc()
-		 		setState(905)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(913)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(907)
+		 		setState(915)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(908)
-		 		try match(PDDLParser.Tokens.T__61.rawValue)
-		 		setState(909)
+		 		setState(916)
+		 		try match(PDDLParser.Tokens.AT_MOST_ONCE.rawValue)
+		 		setState(917)
 		 		try goalDesc()
-		 		setState(910)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(918)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(912)
+		 		setState(920)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(913)
-		 		try match(PDDLParser.Tokens.T__62.rawValue)
-		 		setState(914)
+		 		setState(921)
+		 		try match(PDDLParser.Tokens.SOMETIME_AFTER.rawValue)
+		 		setState(922)
 		 		try goalDesc()
-		 		setState(915)
+		 		setState(923)
 		 		try goalDesc()
-		 		setState(916)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(924)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 9:
 		 		try enterOuterAlt(_localctx, 9)
-		 		setState(918)
+		 		setState(926)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(919)
-		 		try match(PDDLParser.Tokens.T__63.rawValue)
-		 		setState(920)
+		 		setState(927)
+		 		try match(PDDLParser.Tokens.SOMETIME_BEFORE.rawValue)
+		 		setState(928)
 		 		try goalDesc()
-		 		setState(921)
+		 		setState(929)
 		 		try goalDesc()
-		 		setState(922)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(930)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 10:
 		 		try enterOuterAlt(_localctx, 10)
-		 		setState(924)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(925)
-		 		try match(PDDLParser.Tokens.T__64.rawValue)
-		 		setState(926)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(927)
-		 		try goalDesc()
-		 		setState(928)
-		 		try goalDesc()
-		 		setState(929)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
-
-		 		break
-		 	case 11:
-		 		try enterOuterAlt(_localctx, 11)
-		 		setState(931)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(932)
-		 		try match(PDDLParser.Tokens.T__65.rawValue)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(933)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		try match(PDDLParser.Tokens.ALWAYS_WITHIN.rawValue)
 		 		setState(934)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 		 		setState(935)
 		 		try goalDesc()
 		 		setState(936)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		try goalDesc()
+		 		setState(937)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+
+		 		break
+		 	case 11:
+		 		try enterOuterAlt(_localctx, 11)
+		 		setState(939)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(940)
+		 		try match(PDDLParser.Tokens.HOLD_DURING.rawValue)
+		 		setState(941)
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		setState(942)
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		setState(943)
+		 		try goalDesc()
+		 		setState(944)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 12:
 		 		try enterOuterAlt(_localctx, 12)
-		 		setState(938)
+		 		setState(946)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(939)
-		 		try match(PDDLParser.Tokens.T__66.rawValue)
-		 		setState(940)
+		 		setState(947)
+		 		try match(PDDLParser.Tokens.HOLD_AFTER.rawValue)
+		 		setState(948)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(941)
+		 		setState(949)
 		 		try goalDesc()
-		 		setState(942)
-		 		try match(PDDLParser.Tokens.T__2.rawValue)
+		 		setState(950)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	default: break
 		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
-	public class NameContext: ParserRuleContext {
-			open
-			func NAME() -> TerminalNode? {
-				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
-			}
-		override open
-		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_name
-		}
-		override open
-		func enterRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.enterName(self)
-			}
-		}
-		override open
-		func exitRule(_ listener: ParseTreeListener) {
-			if let listener = listener as? PDDLListener {
-				listener.exitName(self)
-			}
-		}
-	}
-	@discardableResult
-	 open func name() throws -> NameContext {
-		var _localctx: NameContext = NameContext(_ctx, getState())
-		try enterRule(_localctx, 144, PDDLParser.RULE_name)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(946)
-		 	_la = try _input.LA(1)
-		 	if (!(//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, PDDLParser.Tokens.T__27.rawValue,PDDLParser.Tokens.T__28.rawValue,PDDLParser.Tokens.NAME.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 28)
-		 	}()
-		 	      return testSet
-		 	 }())) {
-		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
-		 		try consume()
-		 	}
-
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
