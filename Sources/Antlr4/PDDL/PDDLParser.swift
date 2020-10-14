@@ -2022,6 +2022,14 @@ open class PDDLParser: Parser {
 			func term(_ i: Int) -> TermContext? {
 				return getRuleContext(TermContext.self, i)
 			}
+			open
+			func PREFERENCE() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.PREFERENCE.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(PDDLParser.Tokens.NAME.rawValue, 0)
+			}
 		override open
 		func getRuleIndex() -> Int {
 			return PDDLParser.RULE_goalDesc
@@ -2048,7 +2056,7 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(408)
+		 	setState(414)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,32, _ctx)) {
 		 	case 1:
@@ -2191,6 +2199,20 @@ open class PDDLParser: Parser {
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
+		 	case 10:
+		 		try enterOuterAlt(_localctx, 10)
+		 		setState(408)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(409)
+		 		try match(PDDLParser.Tokens.PREFERENCE.rawValue)
+		 		setState(410)
+		 		try match(PDDLParser.Tokens.NAME.rawValue)
+		 		setState(411)
+		 		try goalDesc()
+		 		setState(412)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+
+		 		break
 		 	default: break
 		 	}
 		}
@@ -2242,15 +2264,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(410)
+		 	setState(416)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(411)
+		 	setState(417)
 		 	try binaryComp()
-		 	setState(412)
+		 	setState(418)
 		 	try fExp()
-		 	setState(413)
+		 	setState(419)
 		 	try fExp()
-		 	setState(414)
+		 	setState(420)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -2303,11 +2325,11 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(416)
+		 	setState(422)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(417)
+		 	setState(423)
 		 	try predicate()
-		 	setState(421)
+		 	setState(427)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -2315,15 +2337,15 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(418)
+		 		setState(424)
 		 		try term()
 
 
-		 		setState(423)
+		 		setState(429)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(424)
+		 	setState(430)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -2372,7 +2394,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(426)
+		 	setState(432)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -2443,27 +2465,27 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(428)
-		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(429)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(430)
-		 	try match(PDDLParser.Tokens.DURATIVE_ACTION.rawValue)
-		 	setState(431)
-		 	try actionSymbol()
-		 	setState(432)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(433)
-		 	try match(PDDLParser.Tokens.PARAMETERS.rawValue)
 		 	setState(434)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
 		 	setState(435)
-		 	try typedVariableList()
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
 		 	setState(436)
-		 	try match(PDDLParser.Tokens.T__1.rawValue)
+		 	try match(PDDLParser.Tokens.DURATIVE_ACTION.rawValue)
 		 	setState(437)
-		 	try daDefBody()
+		 	try actionSymbol()
 		 	setState(438)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(439)
+		 	try match(PDDLParser.Tokens.PARAMETERS.rawValue)
+		 	setState(440)
+		 	try match(PDDLParser.Tokens.T__0.rawValue)
+		 	setState(441)
+		 	try typedVariableList()
+		 	setState(442)
+		 	try match(PDDLParser.Tokens.T__1.rawValue)
+		 	setState(443)
+		 	try daDefBody()
+		 	setState(444)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -2526,38 +2548,38 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(457)
+		 	setState(463)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,36, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(440)
+		 		setState(446)
 		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(441)
+		 		setState(447)
 		 		try match(PDDLParser.Tokens.DURATION.rawValue)
-		 		setState(442)
+		 		setState(448)
 		 		try durationConstraint()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(443)
+		 		setState(449)
 		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(444)
+		 		setState(450)
 		 		try match(PDDLParser.Tokens.CONDITION.rawValue)
-		 		setState(448)
+		 		setState(454)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,34, _ctx)) {
 		 		case 1:
-		 			setState(445)
+		 			setState(451)
 		 			try match(PDDLParser.Tokens.T__0.rawValue)
-		 			setState(446)
+		 			setState(452)
 		 			try match(PDDLParser.Tokens.T__1.rawValue)
 
 
 		 			break
 		 		case 2:
-		 			setState(447)
+		 			setState(453)
 		 			try daGD()
 
 		 			break
@@ -2567,23 +2589,23 @@ open class PDDLParser: Parser {
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(450)
+		 		setState(456)
 		 		try match(PDDLParser.Tokens.T__2.rawValue)
-		 		setState(451)
+		 		setState(457)
 		 		try match(PDDLParser.Tokens.EFFECT.rawValue)
-		 		setState(455)
+		 		setState(461)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,35, _ctx)) {
 		 		case 1:
-		 			setState(452)
+		 			setState(458)
 		 			try match(PDDLParser.Tokens.T__0.rawValue)
-		 			setState(453)
+		 			setState(459)
 		 			try match(PDDLParser.Tokens.T__1.rawValue)
 
 
 		 			break
 		 		case 2:
-		 			setState(454)
+		 			setState(460)
 		 			try daEffect()
 
 		 			break
@@ -2654,22 +2676,22 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(477)
+		 	setState(483)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,38, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(459)
+		 		setState(465)
 		 		try prefTimedGD()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(460)
+		 		setState(466)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(461)
+		 		setState(467)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(465)
+		 		setState(471)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -2677,33 +2699,33 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(462)
+		 			setState(468)
 		 			try daGD()
 
 
-		 			setState(467)
+		 			setState(473)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(468)
+		 		setState(474)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(469)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(470)
-		 		try match(PDDLParser.Tokens.FORALL.rawValue)
-		 		setState(471)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(472)
-		 		try typedVariableList()
-		 		setState(473)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-		 		setState(474)
-		 		try daGD()
 		 		setState(475)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(476)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(477)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(478)
+		 		try typedVariableList()
+		 		setState(479)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(480)
+		 		try daGD()
+		 		setState(481)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -2758,22 +2780,22 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(488)
+		 	setState(494)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,40, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(479)
+		 		setState(485)
 		 		try timedGD()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(480)
+		 		setState(486)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(481)
+		 		setState(487)
 		 		try match(PDDLParser.Tokens.PREFERENCE.rawValue)
-		 		setState(483)
+		 		setState(489)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -2781,14 +2803,14 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(482)
+		 			setState(488)
 		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 		 		}
 
-		 		setState(485)
+		 		setState(491)
 		 		try timedGD()
-		 		setState(486)
+		 		setState(492)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -2842,30 +2864,30 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(500)
+		 	setState(506)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,41, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(490)
+		 		setState(496)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(491)
+		 		setState(497)
 		 		try timeSpecifier()
-		 		setState(492)
+		 		setState(498)
 		 		try goalDesc()
-		 		setState(493)
+		 		setState(499)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(495)
+		 		setState(501)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(496)
+		 		setState(502)
 		 		try match(PDDLParser.Tokens.OVER_ALL.rawValue)
-		 		setState(497)
+		 		setState(503)
 		 		try goalDesc()
-		 		setState(498)
+		 		setState(504)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -2917,7 +2939,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(502)
+		 	setState(508)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -2972,7 +2994,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(504)
+		 	setState(510)
 		 	try match(PDDLParser.Tokens.OVER_ALL.rawValue)
 
 		}
@@ -3024,17 +3046,17 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(506)
+		 	setState(512)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(507)
+		 	setState(513)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(508)
+		 	setState(514)
 		 	try match(PDDLParser.Tokens.DERIVED.rawValue)
-		 	setState(509)
+		 	setState(515)
 		 	try atomicFormulaSkeleton()
-		 	setState(510)
+		 	setState(516)
 		 	try goalDesc()
-		 	setState(511)
+		 	setState(517)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -3093,44 +3115,44 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(526)
+		 	setState(532)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,42, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(513)
+		 		setState(519)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(514)
+		 		setState(520)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(515)
+		 		setState(521)
 		 		try binaryOp()
-		 		setState(516)
+		 		setState(522)
 		 		try fExp()
-		 		setState(517)
+		 		setState(523)
 		 		try fExp()
-		 		setState(518)
+		 		setState(524)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(520)
+		 		setState(526)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(521)
+		 		setState(527)
 		 		try match(PDDLParser.Tokens.T__3.rawValue)
-		 		setState(522)
+		 		setState(528)
 		 		try fExp()
-		 		setState(523)
+		 		setState(529)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(525)
+		 		setState(531)
 		 		try fHead()
 
 		 		break
@@ -3185,16 +3207,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(539)
+		 	setState(545)
 		 	try _errHandler.sync(self)
 		 	switch (PDDLParser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .T__0:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(528)
+		 		setState(534)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(529)
+		 		setState(535)
 		 		try functionSymbol()
-		 		setState(533)
+		 		setState(539)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -3202,22 +3224,22 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.VARIABLE.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(530)
+		 			setState(536)
 		 			try term()
 
 
-		 			setState(535)
+		 			setState(541)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(536)
+		 		setState(542)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 
 		 	case .NAME:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(538)
+		 		setState(544)
 		 		try functionSymbol()
 
 		 		break
@@ -3273,16 +3295,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(551)
+		 	setState(557)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,46, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(541)
+		 		setState(547)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(542)
+		 		setState(548)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(546)
+		 		setState(552)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -3290,21 +3312,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(543)
+		 			setState(549)
 		 			try cEffect()
 
 
-		 			setState(548)
+		 			setState(554)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(549)
+		 		setState(555)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(550)
+		 		setState(556)
 		 		try cEffect()
 
 		 		break
@@ -3374,44 +3396,44 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(568)
+		 	setState(574)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,47, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(553)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(554)
-		 		try match(PDDLParser.Tokens.FORALL.rawValue)
-		 		setState(555)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(556)
-		 		try typedVariableList()
-		 		setState(557)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-		 		setState(558)
-		 		try effect()
 		 		setState(559)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(560)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(561)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(562)
+		 		try typedVariableList()
+		 		setState(563)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(564)
+		 		try effect()
+		 		setState(565)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(561)
+		 		setState(567)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(562)
+		 		setState(568)
 		 		try match(PDDLParser.Tokens.WHEN.rawValue)
-		 		setState(563)
+		 		setState(569)
 		 		try goalDesc()
-		 		setState(564)
+		 		setState(570)
 		 		try condEffect()
-		 		setState(565)
+		 		setState(571)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(567)
+		 		setState(573)
 		 		try pEffect()
 
 		 		break
@@ -3473,38 +3495,38 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(582)
+		 	setState(588)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,48, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(570)
+		 		setState(576)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(571)
+		 		setState(577)
 		 		try assignOp()
-		 		setState(572)
+		 		setState(578)
 		 		try fHead()
-		 		setState(573)
+		 		setState(579)
 		 		try fExp()
-		 		setState(574)
+		 		setState(580)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(576)
+		 		setState(582)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(577)
+		 		setState(583)
 		 		try match(PDDLParser.Tokens.NOT.rawValue)
-		 		setState(578)
+		 		setState(584)
 		 		try atomicTermFormula()
-		 		setState(579)
+		 		setState(585)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(581)
+		 		setState(587)
 		 		try atomicTermFormula()
 
 		 		break
@@ -3559,16 +3581,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(594)
+		 	setState(600)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,50, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(584)
+		 		setState(590)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(585)
+		 		setState(591)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(589)
+		 		setState(595)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -3576,21 +3598,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(586)
+		 			setState(592)
 		 			try pEffect()
 
 
-		 			setState(591)
+		 			setState(597)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(592)
+		 		setState(598)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(593)
+		 		setState(599)
 		 		try pEffect()
 
 		 		break
@@ -3634,7 +3656,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(596)
+		 	setState(602)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -3693,7 +3715,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(598)
+		 	setState(604)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -3769,7 +3791,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(600)
+		 	setState(606)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -3835,24 +3857,24 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(614)
+		 	setState(620)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,52, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(602)
+		 		setState(608)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(603)
+		 		setState(609)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(605) 
+		 		setState(611) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(604)
+		 			setState(610)
 		 			try simpleDurationConstraint()
 
 
-		 			setState(607); 
+		 			setState(613); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
@@ -3860,21 +3882,21 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(609)
+		 		setState(615)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(611)
+		 		setState(617)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(612)
+		 		setState(618)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(613)
+		 		setState(619)
 		 		try simpleDurationConstraint()
 
 		 		break
@@ -3936,34 +3958,34 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(628)
+		 	setState(634)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,53, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(616)
+		 		setState(622)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(617)
+		 		setState(623)
 		 		try durOp()
-		 		setState(618)
+		 		setState(624)
 		 		try match(PDDLParser.Tokens.T__11.rawValue)
-		 		setState(619)
+		 		setState(625)
 		 		try match(PDDLParser.Tokens.DURATION.rawValue)
-		 		setState(620)
+		 		setState(626)
 		 		try durValue()
-		 		setState(621)
+		 		setState(627)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(623)
+		 		setState(629)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(624)
+		 		setState(630)
 		 		try timeSpecifier()
-		 		setState(625)
+		 		setState(631)
 		 		try simpleDurationConstraint()
-		 		setState(626)
+		 		setState(632)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -4011,7 +4033,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(630)
+		 	setState(636)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -4070,18 +4092,18 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(634)
+		 	setState(640)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,54, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(632)
+		 		setState(638)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(633)
+		 		setState(639)
 		 		try fExp()
 
 		 		break
@@ -4168,16 +4190,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(666)
+		 	setState(672)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,56, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(636)
+		 		setState(642)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(637)
+		 		setState(643)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(641)
+		 		setState(647)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -4185,67 +4207,67 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(638)
+		 			setState(644)
 		 			try daEffect()
 
 
-		 			setState(643)
+		 			setState(649)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(644)
+		 		setState(650)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(645)
+		 		setState(651)
 		 		try timedEffect()
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(646)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(647)
-		 		try match(PDDLParser.Tokens.FORALL.rawValue)
-		 		setState(648)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(649)
-		 		try typedVariableList()
-		 		setState(650)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-		 		setState(651)
-		 		try daEffect()
 		 		setState(652)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(653)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(654)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(655)
+		 		try typedVariableList()
+		 		setState(656)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(657)
+		 		try daEffect()
+		 		setState(658)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(654)
+		 		setState(660)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(655)
+		 		setState(661)
 		 		try match(PDDLParser.Tokens.WHEN.rawValue)
-		 		setState(656)
+		 		setState(662)
 		 		try daGD()
-		 		setState(657)
+		 		setState(663)
 		 		try timedEffect()
-		 		setState(658)
+		 		setState(664)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(660)
+		 		setState(666)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(661)
+		 		setState(667)
 		 		try assignOp()
-		 		setState(662)
+		 		setState(668)
 		 		try fHead()
-		 		setState(663)
+		 		setState(669)
 		 		try fExpDA()
-		 		setState(664)
+		 		setState(670)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -4311,44 +4333,44 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(684)
+		 	setState(690)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,57, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(668)
+		 		setState(674)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(669)
+		 		setState(675)
 		 		try timeSpecifier()
-		 		setState(670)
+		 		setState(676)
 		 		try daEffect()
-		 		setState(671)
+		 		setState(677)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(673)
+		 		setState(679)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(674)
+		 		setState(680)
 		 		try timeSpecifier()
-		 		setState(675)
+		 		setState(681)
 		 		try fAssignDA()
-		 		setState(676)
+		 		setState(682)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(678)
+		 		setState(684)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(679)
+		 		setState(685)
 		 		try assignOp()
-		 		setState(680)
+		 		setState(686)
 		 		try fHead()
-		 		setState(681)
+		 		setState(687)
 		 		try fExp()
-		 		setState(682)
+		 		setState(688)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -4403,15 +4425,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(686)
+		 	setState(692)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(687)
+		 	setState(693)
 		 	try assignOp()
-		 	setState(688)
+		 	setState(694)
 		 	try fHead()
-		 	setState(689)
+		 	setState(695)
 		 	try fExpDA()
-		 	setState(690)
+		 	setState(696)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4470,51 +4492,51 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(706)
+		 	setState(712)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,59, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(692)
+		 		setState(698)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(699)
+		 		setState(705)
 		 		try _errHandler.sync(self)
 		 		switch(try getInterpreter().adaptivePredict(_input,58, _ctx)) {
 		 		case 1:
-		 			setState(693)
+		 			setState(699)
 		 			try binaryOp()
-		 			setState(694)
+		 			setState(700)
 		 			try fExpDA()
-		 			setState(695)
+		 			setState(701)
 		 			try fExpDA()
 
 
 		 			break
 		 		case 2:
-		 			setState(697)
+		 			setState(703)
 		 			try match(PDDLParser.Tokens.T__3.rawValue)
-		 			setState(698)
+		 			setState(704)
 		 			try fExpDA()
 
 
 		 			break
 		 		default: break
 		 		}
-		 		setState(701)
+		 		setState(707)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(703)
+		 		setState(709)
 		 		try match(PDDLParser.Tokens.T__11.rawValue)
-		 		setState(704)
+		 		setState(710)
 		 		try match(PDDLParser.Tokens.DURATION.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(705)
+		 		setState(711)
 		 		try fExp()
 
 		 		break
@@ -4594,49 +4616,49 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(708)
+		 	setState(714)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(709)
+		 	setState(715)
 		 	try match(PDDLParser.Tokens.DEFINE.rawValue)
-		 	setState(710)
+		 	setState(716)
 		 	try problemDecl()
-		 	setState(711)
+		 	setState(717)
 		 	try problemDomain()
-		 	setState(713)
+		 	setState(719)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,60,_ctx)) {
 		 	case 1:
-		 		setState(712)
+		 		setState(718)
 		 		try requireDef()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(716)
+		 	setState(722)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,61,_ctx)) {
 		 	case 1:
-		 		setState(715)
+		 		setState(721)
 		 		try objectDecl()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(718)
+		 	setState(724)
 		 	try initState()
-		 	setState(719)
+		 	setState(725)
 		 	try goal()
-		 	setState(721)
+		 	setState(727)
 		 	try _errHandler.sync(self)
 		 	switch (try getInterpreter().adaptivePredict(_input,62,_ctx)) {
 		 	case 1:
-		 		setState(720)
+		 		setState(726)
 		 		try probConstraints()
 
 		 		break
 		 	default: break
 		 	}
-		 	setState(724)
+		 	setState(730)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4644,12 +4666,12 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(723)
+		 		setState(729)
 		 		try metricSpec()
 
 		 	}
 
-		 	setState(726)
+		 	setState(732)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4697,13 +4719,13 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(728)
+		 	setState(734)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(729)
+		 	setState(735)
 		 	try match(PDDLParser.Tokens.PROBLEM.rawValue)
-		 	setState(730)
+		 	setState(736)
 		 	try match(PDDLParser.Tokens.NAME.rawValue)
-		 	setState(731)
+		 	setState(737)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4751,15 +4773,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(733)
+		 	setState(739)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(734)
+		 	setState(740)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(735)
+		 	setState(741)
 		 	try match(PDDLParser.Tokens.DOMAIN.rawValue)
-		 	setState(736)
+		 	setState(742)
 		 	try match(PDDLParser.Tokens.NAME.rawValue)
-		 	setState(737)
+		 	setState(743)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4807,15 +4829,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(739)
+		 	setState(745)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(740)
+		 	setState(746)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(741)
+		 	setState(747)
 		 	try match(PDDLParser.Tokens.OBJECTS.rawValue)
-		 	setState(742)
+		 	setState(748)
 		 	try typedNameList()
-		 	setState(743)
+		 	setState(749)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4868,13 +4890,13 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(745)
-		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(746)
-		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(747)
-		 	try match(PDDLParser.Tokens.INIT.rawValue)
 		 	setState(751)
+		 	try match(PDDLParser.Tokens.T__0.rawValue)
+		 	setState(752)
+		 	try match(PDDLParser.Tokens.T__2.rawValue)
+		 	setState(753)
+		 	try match(PDDLParser.Tokens.INIT.rawValue)
+		 	setState(757)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -4882,15 +4904,15 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(748)
+		 		setState(754)
 		 		try initEl()
 
 
-		 		setState(753)
+		 		setState(759)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(754)
+		 	setState(760)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -4945,38 +4967,38 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(768)
+		 	setState(774)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,65, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(756)
+		 		setState(762)
 		 		try nameLiteral()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(757)
+		 		setState(763)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(758)
+		 		setState(764)
 		 		try match(PDDLParser.Tokens.EQUALS.rawValue)
-		 		setState(759)
+		 		setState(765)
 		 		try fHead()
-		 		setState(760)
+		 		setState(766)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(761)
+		 		setState(767)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(763)
+		 		setState(769)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(764)
+		 		setState(770)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(765)
+		 		setState(771)
 		 		try nameLiteral()
-		 		setState(766)
+		 		setState(772)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -5026,24 +5048,24 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(776)
+		 	setState(782)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,66, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(770)
+		 		setState(776)
 		 		try atomicNameFormula()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(771)
+		 		setState(777)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(772)
+		 		setState(778)
 		 		try match(PDDLParser.Tokens.NOT.rawValue)
-		 		setState(773)
+		 		setState(779)
 		 		try atomicNameFormula()
-		 		setState(774)
+		 		setState(780)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -5099,11 +5121,11 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(778)
+		 	setState(784)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(779)
+		 	setState(785)
 		 	try predicate()
-		 	setState(783)
+		 	setState(789)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -5111,15 +5133,15 @@ open class PDDLParser: Parser {
 		 	      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(780)
+		 		setState(786)
 		 		try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 		setState(785)
+		 		setState(791)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(786)
+		 	setState(792)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -5167,15 +5189,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(788)
+		 	setState(794)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(789)
+		 	setState(795)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(790)
+		 	setState(796)
 		 	try match(PDDLParser.Tokens.GOAL.rawValue)
-		 	setState(791)
+		 	setState(797)
 		 	try goalDesc()
-		 	setState(792)
+		 	setState(798)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -5223,15 +5245,15 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(794)
+		 	setState(800)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(795)
+		 	setState(801)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(796)
+		 	setState(802)
 		 	try match(PDDLParser.Tokens.CONSTRAINTS.rawValue)
-		 	setState(797)
+		 	setState(803)
 		 	try prefConGD()
-		 	setState(798)
+		 	setState(804)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -5303,16 +5325,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(826)
+		 	setState(832)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,70, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(800)
+		 		setState(806)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(801)
+		 		setState(807)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(805)
+		 		setState(811)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -5320,43 +5342,43 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(802)
+		 			setState(808)
 		 			try prefConGD()
 
 
-		 			setState(807)
+		 			setState(813)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(808)
+		 		setState(814)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(809)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(810)
-		 		try match(PDDLParser.Tokens.FORALL.rawValue)
-		 		setState(811)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(812)
-		 		try typedVariableList()
-		 		setState(813)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-		 		setState(814)
-		 		try prefConGD()
 		 		setState(815)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(816)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(817)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(818)
+		 		try typedVariableList()
+		 		setState(819)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(820)
+		 		try prefConGD()
+		 		setState(821)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(817)
+		 		setState(823)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(818)
+		 		setState(824)
 		 		try match(PDDLParser.Tokens.PREFERENCE.rawValue)
-		 		setState(820)
+		 		setState(826)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -5364,20 +5386,20 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(819)
+		 			setState(825)
 		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 		 		}
 
-		 		setState(822)
+		 		setState(828)
 		 		try conGD()
-		 		setState(823)
+		 		setState(829)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(825)
+		 		setState(831)
 		 		try conGD()
 
 		 		break
@@ -5432,17 +5454,17 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(828)
+		 	setState(834)
 		 	try match(PDDLParser.Tokens.T__0.rawValue)
-		 	setState(829)
+		 	setState(835)
 		 	try match(PDDLParser.Tokens.T__2.rawValue)
-		 	setState(830)
+		 	setState(836)
 		 	try match(PDDLParser.Tokens.METRIC.rawValue)
-		 	setState(831)
+		 	setState(837)
 		 	try optimization()
-		 	setState(832)
+		 	setState(838)
 		 	try metricFExp()
-		 	setState(833)
+		 	setState(839)
 		 	try match(PDDLParser.Tokens.T__1.rawValue)
 
 		}
@@ -5491,7 +5513,7 @@ open class PDDLParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(835)
+		 	setState(841)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -5578,28 +5600,28 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(875)
+		 	setState(881)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,73, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(837)
+		 		setState(843)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(838)
+		 		setState(844)
 		 		try binaryOp()
-		 		setState(839)
+		 		setState(845)
 		 		try metricFExp()
-		 		setState(840)
+		 		setState(846)
 		 		try metricFExp()
-		 		setState(841)
+		 		setState(847)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(843)
+		 		setState(849)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(844)
+		 		setState(850)
 		 		_la = try _input.LA(1)
 		 		if (!(//closure
 		 		 { () -> Bool in
@@ -5612,17 +5634,17 @@ open class PDDLParser: Parser {
 		 			_errHandler.reportMatch(self)
 		 			try consume()
 		 		}
-		 		setState(845)
+		 		setState(851)
 		 		try metricFExp()
-		 		setState(847) 
+		 		setState(853) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(846)
+		 			setState(852)
 		 			try metricFExp()
 
 
-		 			setState(849); 
+		 			setState(855); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
@@ -5631,35 +5653,35 @@ open class PDDLParser: Parser {
 		 		          testSet = testSet || _la == PDDLParser.Tokens.NAME.rawValue || _la == PDDLParser.Tokens.NUMBER.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(851)
+		 		setState(857)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(853)
+		 		setState(859)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(854)
+		 		setState(860)
 		 		try match(PDDLParser.Tokens.T__3.rawValue)
-		 		setState(855)
+		 		setState(861)
 		 		try metricFExp()
-		 		setState(856)
+		 		setState(862)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(858)
+		 		setState(864)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(859)
+		 		setState(865)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(860)
+		 		setState(866)
 		 		try functionSymbol()
-		 		setState(864)
+		 		setState(870)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -5667,39 +5689,39 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(861)
+		 			setState(867)
 		 			try match(PDDLParser.Tokens.NAME.rawValue)
 
 
-		 			setState(866)
+		 			setState(872)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(867)
+		 		setState(873)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 6:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(869)
+		 		setState(875)
 		 		try functionSymbol()
 
 		 		break
 		 	case 7:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(870)
+		 		setState(876)
 		 		try match(PDDLParser.Tokens.TOTAL_TIME.rawValue)
 
 		 		break
 		 	case 8:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(871)
+		 		setState(877)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(872)
+		 		setState(878)
 		 		try match(PDDLParser.Tokens.IS_VIOLATED.rawValue)
-		 		setState(873)
+		 		setState(879)
 		 		try match(PDDLParser.Tokens.NAME.rawValue)
-		 		setState(874)
+		 		setState(880)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
@@ -5818,16 +5840,16 @@ open class PDDLParser: Parser {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(952)
+		 	setState(958)
 		 	try _errHandler.sync(self)
 		 	switch(try getInterpreter().adaptivePredict(_input,75, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(877)
+		 		setState(883)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(878)
+		 		setState(884)
 		 		try match(PDDLParser.Tokens.AND.rawValue)
-		 		setState(882)
+		 		setState(888)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -5835,118 +5857,104 @@ open class PDDLParser: Parser {
 		 		      let testSet: Bool = _la == PDDLParser.Tokens.T__0.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(879)
+		 			setState(885)
 		 			try conGD()
 
 
-		 			setState(884)
+		 			setState(890)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(885)
+		 		setState(891)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(886)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(887)
-		 		try match(PDDLParser.Tokens.FORALL.rawValue)
-		 		setState(888)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(889)
-		 		try typedVariableList()
-		 		setState(890)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-		 		setState(891)
-		 		try conGD()
 		 		setState(892)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(893)
+		 		try match(PDDLParser.Tokens.FORALL.rawValue)
+		 		setState(894)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(895)
+		 		try typedVariableList()
+		 		setState(896)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+		 		setState(897)
+		 		try conGD()
+		 		setState(898)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 3:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(894)
+		 		setState(900)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(895)
+		 		setState(901)
 		 		try match(PDDLParser.Tokens.AT_END.rawValue)
-		 		setState(896)
+		 		setState(902)
 		 		try goalDesc()
-		 		setState(897)
+		 		setState(903)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 4:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(899)
+		 		setState(905)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(900)
+		 		setState(906)
 		 		try match(PDDLParser.Tokens.ALWAYS.rawValue)
-		 		setState(901)
+		 		setState(907)
 		 		try goalDesc()
-		 		setState(902)
+		 		setState(908)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 5:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(904)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(905)
-		 		try match(PDDLParser.Tokens.SOMETIME.rawValue)
-		 		setState(906)
-		 		try goalDesc()
-		 		setState(907)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-
-		 		break
-		 	case 6:
-		 		try enterOuterAlt(_localctx, 6)
-		 		setState(909)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(910)
-		 		try match(PDDLParser.Tokens.WITHIN.rawValue)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(911)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		try match(PDDLParser.Tokens.SOMETIME.rawValue)
 		 		setState(912)
 		 		try goalDesc()
 		 		setState(913)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
-		 	case 7:
-		 		try enterOuterAlt(_localctx, 7)
+		 	case 6:
+		 		try enterOuterAlt(_localctx, 6)
 		 		setState(915)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(916)
-		 		try match(PDDLParser.Tokens.AT_MOST_ONCE.rawValue)
+		 		try match(PDDLParser.Tokens.WITHIN.rawValue)
 		 		setState(917)
-		 		try goalDesc()
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 		 		setState(918)
+		 		try goalDesc()
+		 		setState(919)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
-		 	case 8:
-		 		try enterOuterAlt(_localctx, 8)
-		 		setState(920)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 	case 7:
+		 		try enterOuterAlt(_localctx, 7)
 		 		setState(921)
-		 		try match(PDDLParser.Tokens.SOMETIME_AFTER.rawValue)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(922)
-		 		try goalDesc()
+		 		try match(PDDLParser.Tokens.AT_MOST_ONCE.rawValue)
 		 		setState(923)
 		 		try goalDesc()
 		 		setState(924)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
-		 	case 9:
-		 		try enterOuterAlt(_localctx, 9)
+		 	case 8:
+		 		try enterOuterAlt(_localctx, 8)
 		 		setState(926)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(927)
-		 		try match(PDDLParser.Tokens.SOMETIME_BEFORE.rawValue)
+		 		try match(PDDLParser.Tokens.SOMETIME_AFTER.rawValue)
 		 		setState(928)
 		 		try goalDesc()
 		 		setState(929)
@@ -5955,49 +5963,63 @@ open class PDDLParser: Parser {
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
-		 	case 10:
-		 		try enterOuterAlt(_localctx, 10)
+		 	case 9:
+		 		try enterOuterAlt(_localctx, 9)
 		 		setState(932)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
 		 		setState(933)
-		 		try match(PDDLParser.Tokens.ALWAYS_WITHIN.rawValue)
+		 		try match(PDDLParser.Tokens.SOMETIME_BEFORE.rawValue)
 		 		setState(934)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		try goalDesc()
 		 		setState(935)
 		 		try goalDesc()
 		 		setState(936)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+
+		 		break
+		 	case 10:
+		 		try enterOuterAlt(_localctx, 10)
+		 		setState(938)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(939)
+		 		try match(PDDLParser.Tokens.ALWAYS_WITHIN.rawValue)
+		 		setState(940)
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		setState(941)
 		 		try goalDesc()
-		 		setState(937)
+		 		setState(942)
+		 		try goalDesc()
+		 		setState(943)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break
 		 	case 11:
 		 		try enterOuterAlt(_localctx, 11)
-		 		setState(939)
+		 		setState(945)
 		 		try match(PDDLParser.Tokens.T__0.rawValue)
-		 		setState(940)
-		 		try match(PDDLParser.Tokens.HOLD_DURING.rawValue)
-		 		setState(941)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(942)
-		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
-		 		setState(943)
-		 		try goalDesc()
-		 		setState(944)
-		 		try match(PDDLParser.Tokens.T__1.rawValue)
-
-		 		break
-		 	case 12:
-		 		try enterOuterAlt(_localctx, 12)
 		 		setState(946)
-		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		try match(PDDLParser.Tokens.HOLD_DURING.rawValue)
 		 		setState(947)
-		 		try match(PDDLParser.Tokens.HOLD_AFTER.rawValue)
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 		 		setState(948)
 		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
 		 		setState(949)
 		 		try goalDesc()
 		 		setState(950)
+		 		try match(PDDLParser.Tokens.T__1.rawValue)
+
+		 		break
+		 	case 12:
+		 		try enterOuterAlt(_localctx, 12)
+		 		setState(952)
+		 		try match(PDDLParser.Tokens.T__0.rawValue)
+		 		setState(953)
+		 		try match(PDDLParser.Tokens.HOLD_AFTER.rawValue)
+		 		setState(954)
+		 		try match(PDDLParser.Tokens.NUMBER.rawValue)
+		 		setState(955)
+		 		try goalDesc()
+		 		setState(956)
 		 		try match(PDDLParser.Tokens.T__1.rawValue)
 
 		 		break

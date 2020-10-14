@@ -122,7 +122,7 @@ actionDefBody
    ;
 
 goalDesc
-   : atomicTermFormula | '(' AND goalDesc* ')' | '(' OR goalDesc* ')' | '(' NOT goalDesc ')' | '(' IMPLY goalDesc goalDesc ')' | '(' EXISTS '(' typedVariableList ')' goalDesc ')' | '(' FORALL '(' typedVariableList ')' goalDesc ')' | fComp | '(' EQUALS term term ')'
+   : atomicTermFormula | '(' AND goalDesc* ')' | '(' OR goalDesc* ')' | '(' NOT goalDesc ')' | '(' IMPLY goalDesc goalDesc ')' | '(' EXISTS '(' typedVariableList ')' goalDesc ')' | '(' FORALL '(' typedVariableList ')' goalDesc ')' | fComp | '(' EQUALS term term ')' | '(' PREFERENCE NAME goalDesc ')'
    ;
 
 fComp
