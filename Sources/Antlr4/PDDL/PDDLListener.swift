@@ -751,17 +751,17 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitObjectDecl(_ ctx: PDDLParser.ObjectDeclContext)
 	/**
-	 * Enter a parse tree produced by {@link PDDLParser#initstate}.
+	 * Enter a parse tree produced by {@link PDDLParser#initState}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterInitstate(_ ctx: PDDLParser.InitstateContext)
+	func enterInitState(_ ctx: PDDLParser.InitStateContext)
 	/**
-	 * Exit a parse tree produced by {@link PDDLParser#initstate}.
+	 * Exit a parse tree produced by {@link PDDLParser#initState}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitInitstate(_ ctx: PDDLParser.InitstateContext)
+	func exitInitState(_ ctx: PDDLParser.InitStateContext)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#initEl}.
 	 - Parameters:

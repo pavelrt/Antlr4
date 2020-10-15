@@ -63,7 +63,7 @@ open class PDDLParser: Parser {
             RULE_durOp = 50, RULE_durValue = 51, RULE_daEffect = 52, RULE_timedEffect = 53, 
             RULE_fAssignDA = 54, RULE_fExpDA = 55, RULE_assignOpT = 56, 
             RULE_gameproblem = 57, RULE_problem = 58, RULE_problemDecl = 59, 
-            RULE_problemDomain = 60, RULE_objectDecl = 61, RULE_initstate = 62, 
+            RULE_problemDomain = 60, RULE_objectDecl = 61, RULE_initState = 62, 
             RULE_initEl = 63, RULE_nameLiteral = 64, RULE_atomicNameFormula = 65, 
             RULE_goal = 66, RULE_probConstraints = 67, RULE_prefConGD = 68, 
             RULE_metricSpec = 69, RULE_optimization = 70, RULE_metricFExp = 71, 
@@ -82,7 +82,7 @@ open class PDDLParser: Parser {
 		"cEffect", "pEffect", "condEffect", "binaryOp", "binaryComp", "assignOp", 
 		"durationConstraint", "simpleDurationConstraint", "durOp", "durValue", 
 		"daEffect", "timedEffect", "fAssignDA", "fExpDA", "assignOpT", "gameproblem", 
-		"problem", "problemDecl", "problemDomain", "objectDecl", "initstate", 
+		"problem", "problemDecl", "problemDomain", "objectDecl", "initState", 
 		"initEl", "nameLiteral", "atomicNameFormula", "goal", "probConstraints", 
 		"prefConGD", "metricSpec", "optimization", "metricFExp", "conGD", "name"
 	]
@@ -4496,8 +4496,8 @@ open class PDDLParser: Parser {
 				return getRuleContext(ProblemDomainContext.self, 0)
 			}
 			open
-			func initstate() -> InitstateContext? {
-				return getRuleContext(InitstateContext.self, 0)
+			func initState() -> InitStateContext? {
+				return getRuleContext(InitStateContext.self, 0)
 			}
 			open
 			func goal() -> [GoalContext] {
@@ -4587,7 +4587,7 @@ open class PDDLParser: Parser {
 		 	default: break
 		 	}
 		 	setState(724)
-		 	try initstate()
+		 	try initState()
 		 	setState(725)
 		 	try goal()
 		 	setState(727)
@@ -4658,8 +4658,8 @@ open class PDDLParser: Parser {
 				return getRuleContext(ProblemDomainContext.self, 0)
 			}
 			open
-			func initstate() -> InitstateContext? {
-				return getRuleContext(InitstateContext.self, 0)
+			func initState() -> InitStateContext? {
+				return getRuleContext(InitStateContext.self, 0)
 			}
 			open
 			func goal() -> GoalContext? {
@@ -4737,7 +4737,7 @@ open class PDDLParser: Parser {
 		 	default: break
 		 	}
 		 	setState(751)
-		 	try initstate()
+		 	try initState()
 		 	setState(752)
 		 	try goal()
 		 	setState(754)
@@ -4926,7 +4926,7 @@ open class PDDLParser: Parser {
 		return _localctx
 	}
 
-	public class InitstateContext: ParserRuleContext {
+	public class InitStateContext: ParserRuleContext {
 			open
 			func initEl() -> [InitElContext] {
 				return getRuleContexts(InitElContext.self)
@@ -4937,25 +4937,25 @@ open class PDDLParser: Parser {
 			}
 		override open
 		func getRuleIndex() -> Int {
-			return PDDLParser.RULE_initstate
+			return PDDLParser.RULE_initState
 		}
 		override open
 		func enterRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.enterInitstate(self)
+				listener.enterInitState(self)
 			}
 		}
 		override open
 		func exitRule(_ listener: ParseTreeListener) {
 			if let listener = listener as? PDDLListener {
-				listener.exitInitstate(self)
+				listener.exitInitState(self)
 			}
 		}
 	}
 	@discardableResult
-	 open func initstate() throws -> InitstateContext {
-		var _localctx: InitstateContext = InitstateContext(_ctx, getState())
-		try enterRule(_localctx, 124, PDDLParser.RULE_initstate)
+	 open func initState() throws -> InitStateContext {
+		var _localctx: InitStateContext = InitStateContext(_ctx, getState())
+		try enterRule(_localctx, 124, PDDLParser.RULE_initState)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()

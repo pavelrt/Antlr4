@@ -821,13 +821,13 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterInitstate(_ ctx: PDDLParser.InitstateContext) { }
+	open func enterInitState(_ ctx: PDDLParser.InitStateContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitInitstate(_ ctx: PDDLParser.InitstateContext) { }
+	open func exitInitState(_ ctx: PDDLParser.InitStateContext) { }
 
 	/**
 	 * {@inheritDoc}

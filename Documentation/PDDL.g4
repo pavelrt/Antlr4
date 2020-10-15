@@ -362,7 +362,7 @@ gameproblem
 	  problemDomain
       requireDef?
       objectDecl?
-      initstate
+      initState
       goal
       probConstraints?
       metricSpec?
@@ -380,7 +380,7 @@ problem
 	  problemDomain
       requireDef?
       objectDecl?
-      initstate
+      initState
       goal
       probConstraints?
       metricSpec?
@@ -400,7 +400,7 @@ objectDecl
 	: '(' ':objects' typedNameList ')'
 	;
 
-initstate
+initState
 	: '(' ':init' initEl* ')'
 	;
 
