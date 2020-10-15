@@ -28,6 +28,19 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterGameproblem(_ ctx: PDDLParser.GameproblemContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitGameproblem(_ ctx: PDDLParser.GameproblemContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterDomain(_ ctx: PDDLParser.DomainContext) { }
 	/**
 	 * {@inheritDoc}

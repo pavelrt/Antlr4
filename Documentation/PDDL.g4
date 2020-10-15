@@ -15,7 +15,13 @@ grammar PDDL;
 
 /************* Start of grammar *******************/ 
 pddlDoc
-   : domain | problem
+   : domain | problem | gameproblem
+   ;
+
+/************* GAME PROBLEM ****************************/ 
+
+gameproblem
+   : '(' DEFINE problemDecl problemDomain requireDef? objectDecl? initState goal+ probConstraints? metricSpec* ')'
    ;
 
 /************* DOMAINS ****************************/ 
