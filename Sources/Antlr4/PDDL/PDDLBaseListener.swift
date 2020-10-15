@@ -106,13 +106,13 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterType(_ ctx: PDDLParser.TypeContext) { }
+	open func enterR_type(_ ctx: PDDLParser.R_typeContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitType(_ ctx: PDDLParser.TypeContext) { }
+	open func exitR_type(_ ctx: PDDLParser.R_typeContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -340,6 +340,19 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterPrecondition(_ ctx: PDDLParser.PreconditionContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPrecondition(_ ctx: PDDLParser.PreconditionContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterGoalDesc(_ ctx: PDDLParser.GoalDescContext) { }
 	/**
 	 * {@inheritDoc}
@@ -503,6 +516,19 @@ open class PDDLBaseListener: PDDLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitFExp(_ ctx: PDDLParser.FExpContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterFExp2(_ ctx: PDDLParser.FExp2Context) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitFExp2(_ ctx: PDDLParser.FExp2Context) { }
 
 	/**
 	 * {@inheritDoc}
@@ -717,6 +743,19 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterAssignOpT(_ ctx: PDDLParser.AssignOpTContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAssignOpT(_ ctx: PDDLParser.AssignOpTContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterGameproblem(_ ctx: PDDLParser.GameproblemContext) { }
 	/**
 	 * {@inheritDoc}
@@ -782,13 +821,13 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterInitState(_ ctx: PDDLParser.InitStateContext) { }
+	open func enterInitstate(_ ctx: PDDLParser.InitstateContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitInitState(_ ctx: PDDLParser.InitStateContext) { }
+	open func exitInitstate(_ ctx: PDDLParser.InitstateContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -919,6 +958,19 @@ open class PDDLBaseListener: PDDLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitConGD(_ ctx: PDDLParser.ConGDContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterName(_ ctx: PDDLParser.NameContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitName(_ ctx: PDDLParser.NameContext) { }
 
 	/**
 	 * {@inheritDoc}

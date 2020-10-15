@@ -91,17 +91,17 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitSingleTypeNameList(_ ctx: PDDLParser.SingleTypeNameListContext)
 	/**
-	 * Enter a parse tree produced by {@link PDDLParser#type}.
+	 * Enter a parse tree produced by {@link PDDLParser#r_type}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterType(_ ctx: PDDLParser.TypeContext)
+	func enterR_type(_ ctx: PDDLParser.R_typeContext)
 	/**
-	 * Exit a parse tree produced by {@link PDDLParser#type}.
+	 * Exit a parse tree produced by {@link PDDLParser#r_type}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitType(_ ctx: PDDLParser.TypeContext)
+	func exitR_type(_ ctx: PDDLParser.R_typeContext)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#primType}.
 	 - Parameters:
@@ -307,6 +307,18 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitActionDefBody(_ ctx: PDDLParser.ActionDefBodyContext)
 	/**
+	 * Enter a parse tree produced by {@link PDDLParser#precondition}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterPrecondition(_ ctx: PDDLParser.PreconditionContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#precondition}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitPrecondition(_ ctx: PDDLParser.PreconditionContext)
+	/**
 	 * Enter a parse tree produced by {@link PDDLParser#goalDesc}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -462,6 +474,18 @@ public protocol PDDLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitFExp(_ ctx: PDDLParser.FExpContext)
+	/**
+	 * Enter a parse tree produced by {@link PDDLParser#fExp2}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterFExp2(_ ctx: PDDLParser.FExp2Context)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#fExp2}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitFExp2(_ ctx: PDDLParser.FExp2Context)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#fHead}.
 	 - Parameters:
@@ -655,6 +679,18 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitFExpDA(_ ctx: PDDLParser.FExpDAContext)
 	/**
+	 * Enter a parse tree produced by {@link PDDLParser#assignOpT}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterAssignOpT(_ ctx: PDDLParser.AssignOpTContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#assignOpT}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitAssignOpT(_ ctx: PDDLParser.AssignOpTContext)
+	/**
 	 * Enter a parse tree produced by {@link PDDLParser#gameproblem}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -715,17 +751,17 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitObjectDecl(_ ctx: PDDLParser.ObjectDeclContext)
 	/**
-	 * Enter a parse tree produced by {@link PDDLParser#initState}.
+	 * Enter a parse tree produced by {@link PDDLParser#initstate}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterInitState(_ ctx: PDDLParser.InitStateContext)
+	func enterInitstate(_ ctx: PDDLParser.InitstateContext)
 	/**
-	 * Exit a parse tree produced by {@link PDDLParser#initState}.
+	 * Exit a parse tree produced by {@link PDDLParser#initstate}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitInitState(_ ctx: PDDLParser.InitStateContext)
+	func exitInitstate(_ ctx: PDDLParser.InitstateContext)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#initEl}.
 	 - Parameters:
@@ -846,4 +882,16 @@ public protocol PDDLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitConGD(_ ctx: PDDLParser.ConGDContext)
+	/**
+	 * Enter a parse tree produced by {@link PDDLParser#name}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterName(_ ctx: PDDLParser.NameContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#name}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitName(_ ctx: PDDLParser.NameContext)
 }

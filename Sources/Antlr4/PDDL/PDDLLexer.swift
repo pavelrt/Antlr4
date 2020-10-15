@@ -16,24 +16,17 @@ open class PDDLLexer: Lexer {
 
 	public
 	static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, 
-            T__8=9, T__9=10, T__10=11, T__11=12, REQUIRE_KEY=13, DEFINE=14, 
-            DOMAIN=15, PROBLEM=16, REQUIREMENTS=17, TYPES=18, EITHER=19, 
-            FUNCTIONS=20, CONSTANTS=21, PREDICATES=22, CONSTRAINTS=23, ACTION=24, 
-            PARAMETERS=25, PRECONDITION=26, EFFECT=27, AND=28, OR=29, NOT=30, 
-            IMPLY=31, EXISTS=32, FORALL=33, DURATIVE_ACTION=34, DURATION=35, 
-            CONDITION=36, PREFERENCE=37, OVER_ALL=38, AT_START=39, AT_END=40, 
-            DERIVED=41, WHEN=42, ASSIGN=43, INCREASE=44, DECREASE=45, SCALE_UP=46, 
-            SCALE_DOWN=47, OBJECTS=48, INIT=49, GOAL=50, METRIC=51, MINIMIZE=52, 
-            MAXIMIZE=53, TOTAL_TIME=54, IS_VIOLATED=55, ALWAYS=56, SOMETIME=57, 
-            WITHIN=58, AT_MOST_ONCE=59, SOMETIME_AFTER=60, SOMETIME_BEFORE=61, 
-            ALWAYS_WITHIN=62, HOLD_DURING=63, HOLD_AFTER=64, R_STRIPS=65, 
-            R_TYPING=66, R_NEGATIVE_PRECONDITIONS=67, R_DISJUNCTIVE_PRECONDITIONS=68, 
-            R_EQUALITY=69, R_EXISTENTIAL_PRECONDITIONS=70, R_UNIVERSAL_PRECONDITIONS=71, 
-            R_QUANTIFIED_PRECONDITIONS=72, R_CONDITIONAL_EFFECTS=73, R_FLUENTS=74, 
-            R_ADL=75, R_DURATIVE_ACTIONS=76, R_DERIVED_PREDICATES=77, R_TIMED_INITIAL_LITERALS=78, 
-            R_PREFERENCES=79, R_CONSTRAINTS=80, R_ACTION_COSTS=81, STR_NUMBER=82, 
-            NAME=83, VARIABLE=84, EQUALS=85, NUMBER=86, LINE_COMMENT=87, 
-            WHITESPACE=88
+            T__8=9, T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, 
+            T__15=16, T__16=17, T__17=18, T__18=19, T__19=20, T__20=21, 
+            T__21=22, T__22=23, T__23=24, T__24=25, T__25=26, T__26=27, 
+            T__27=28, T__28=29, T__29=30, T__30=31, T__31=32, T__32=33, 
+            T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, T__38=39, 
+            T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, T__44=45, 
+            T__45=46, T__46=47, T__47=48, T__48=49, T__49=50, T__50=51, 
+            T__51=52, T__52=53, T__53=54, T__54=55, T__55=56, T__56=57, 
+            T__57=58, T__58=59, T__59=60, T__60=61, T__61=62, T__62=63, 
+            T__63=64, T__64=65, T__65=66, T__66=67, REQUIRE_KEY=68, NAME=69, 
+            VARIABLE=70, NUMBER=71, LINE_COMMENT=72, WHITESPACE=73
 
 	public
 	static let channelNames: [String] = [
@@ -48,50 +41,38 @@ open class PDDLLexer: Lexer {
 	public
 	static let ruleNames: [String] = [
 		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
-		"T__9", "T__10", "T__11", "REQUIRE_KEY", "DEFINE", "DOMAIN", "PROBLEM", 
-		"REQUIREMENTS", "TYPES", "EITHER", "FUNCTIONS", "CONSTANTS", "PREDICATES", 
-		"CONSTRAINTS", "ACTION", "PARAMETERS", "PRECONDITION", "EFFECT", "AND", 
-		"OR", "NOT", "IMPLY", "EXISTS", "FORALL", "DURATIVE_ACTION", "DURATION", 
-		"CONDITION", "PREFERENCE", "OVER_ALL", "AT_START", "AT_END", "DERIVED", 
-		"WHEN", "ASSIGN", "INCREASE", "DECREASE", "SCALE_UP", "SCALE_DOWN", "OBJECTS", 
-		"INIT", "GOAL", "METRIC", "MINIMIZE", "MAXIMIZE", "TOTAL_TIME", "IS_VIOLATED", 
-		"ALWAYS", "SOMETIME", "WITHIN", "AT_MOST_ONCE", "SOMETIME_AFTER", "SOMETIME_BEFORE", 
-		"ALWAYS_WITHIN", "HOLD_DURING", "HOLD_AFTER", "R_STRIPS", "R_TYPING", 
-		"R_NEGATIVE_PRECONDITIONS", "R_DISJUNCTIVE_PRECONDITIONS", "R_EQUALITY", 
-		"R_EXISTENTIAL_PRECONDITIONS", "R_UNIVERSAL_PRECONDITIONS", "R_QUANTIFIED_PRECONDITIONS", 
-		"R_CONDITIONAL_EFFECTS", "R_FLUENTS", "R_ADL", "R_DURATIVE_ACTIONS", "R_DERIVED_PREDICATES", 
-		"R_TIMED_INITIAL_LITERALS", "R_PREFERENCES", "R_CONSTRAINTS", "R_ACTION_COSTS", 
-		"STR_NUMBER", "NAME", "VARIABLE", "EQUALS", "NUMBER", "LINE_COMMENT", 
-		"WHITESPACE", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
-		"M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 
-		"LETTER", "ANY_CHAR", "DIGIT"
+		"T__9", "T__10", "T__11", "T__12", "T__13", "T__14", "T__15", "T__16", 
+		"T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
+		"T__25", "T__26", "T__27", "T__28", "T__29", "T__30", "T__31", "T__32", 
+		"T__33", "T__34", "T__35", "T__36", "T__37", "T__38", "T__39", "T__40", 
+		"T__41", "T__42", "T__43", "T__44", "T__45", "T__46", "T__47", "T__48", 
+		"T__49", "T__50", "T__51", "T__52", "T__53", "T__54", "T__55", "T__56", 
+		"T__57", "T__58", "T__59", "T__60", "T__61", "T__62", "T__63", "T__64", 
+		"T__65", "T__66", "REQUIRE_KEY", "NAME", "LETTER", "ANY_CHAR", "VARIABLE", 
+		"NUMBER", "DIGIT", "LINE_COMMENT", "WHITESPACE"
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
-		nil, "'('", "')'", "':'", "'-'", "'*'", "'+'", "'/'", "'>'", "'<'", "'>='", 
-		"'<='", "'?'", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, "'='"
+		nil, "'('", "'define'", "')'", "'domain'", "':requirements'", "':types'", 
+		"'-'", "'either'", "':functions'", "'number'", "':constants'", "':predicates'", 
+		"':constraints'", "':action'", "':parameters'", "':precondition'", "':effect'", 
+		"'and'", "'or'", "'not'", "'imply'", "'exists'", "'forall'", "'preference'", 
+		"':durative-action'", "':duration'", "':condition'", "'at'", "'over'", 
+		"'start'", "'end'", "'all'", "':derived'", "'when'", "'*'", "'+'", "'/'", 
+		"'>'", "'<'", "'='", "'>='", "'<='", "'assign'", "'scale-up'", "'scale-down'", 
+		"'increase'", "'decrease'", "'?duration'", "'problem'", "':domain'", "':objects'", 
+		"':init'", "':goal'", "':metric'", "'minimize'", "'maximize'", "'total-time'", 
+		"'is-violated'", "'always'", "'sometime'", "'within'", "'at-most-once'", 
+		"'sometime-after'", "'sometime-before'", "'always-within'", "'hold-during'", 
+		"'hold-after'"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "REQUIRE_KEY", 
-		"DEFINE", "DOMAIN", "PROBLEM", "REQUIREMENTS", "TYPES", "EITHER", "FUNCTIONS", 
-		"CONSTANTS", "PREDICATES", "CONSTRAINTS", "ACTION", "PARAMETERS", "PRECONDITION", 
-		"EFFECT", "AND", "OR", "NOT", "IMPLY", "EXISTS", "FORALL", "DURATIVE_ACTION", 
-		"DURATION", "CONDITION", "PREFERENCE", "OVER_ALL", "AT_START", "AT_END", 
-		"DERIVED", "WHEN", "ASSIGN", "INCREASE", "DECREASE", "SCALE_UP", "SCALE_DOWN", 
-		"OBJECTS", "INIT", "GOAL", "METRIC", "MINIMIZE", "MAXIMIZE", "TOTAL_TIME", 
-		"IS_VIOLATED", "ALWAYS", "SOMETIME", "WITHIN", "AT_MOST_ONCE", "SOMETIME_AFTER", 
-		"SOMETIME_BEFORE", "ALWAYS_WITHIN", "HOLD_DURING", "HOLD_AFTER", "R_STRIPS", 
-		"R_TYPING", "R_NEGATIVE_PRECONDITIONS", "R_DISJUNCTIVE_PRECONDITIONS", 
-		"R_EQUALITY", "R_EXISTENTIAL_PRECONDITIONS", "R_UNIVERSAL_PRECONDITIONS", 
-		"R_QUANTIFIED_PRECONDITIONS", "R_CONDITIONAL_EFFECTS", "R_FLUENTS", "R_ADL", 
-		"R_DURATIVE_ACTIONS", "R_DERIVED_PREDICATES", "R_TIMED_INITIAL_LITERALS", 
-		"R_PREFERENCES", "R_CONSTRAINTS", "R_ACTION_COSTS", "STR_NUMBER", "NAME", 
-		"VARIABLE", "EQUALS", "NUMBER", "LINE_COMMENT", "WHITESPACE"
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "REQUIRE_KEY", 
+		"NAME", "VARIABLE", "NUMBER", "LINE_COMMENT", "WHITESPACE"
 	]
 	public
 	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
