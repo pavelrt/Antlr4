@@ -406,7 +406,7 @@ initState
 
 initEl
 	: nameLiteral
-	| '(' '=' fHead NUMBER ')'         
+	| fLiteral         
 	| '(' 'at' NUMBER nameLiteral ')'
 	;
 
