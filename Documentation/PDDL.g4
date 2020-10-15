@@ -410,6 +410,10 @@ initEl
 	| '(' 'at' NUMBER nameLiteral ')'
 	;
 
+fLiteral
+	: '(' '=' fHead NUMBER ')' 
+	;
+
 nameLiteral
 	: atomicNameFormula
 	| '(' 'not' atomicNameFormula ')' 

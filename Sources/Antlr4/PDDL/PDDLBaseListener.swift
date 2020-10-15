@@ -847,6 +847,19 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterFLiteral(_ ctx: PDDLParser.FLiteralContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitFLiteral(_ ctx: PDDLParser.FLiteralContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterNameLiteral(_ ctx: PDDLParser.NameLiteralContext) { }
 	/**
 	 * {@inheritDoc}

@@ -775,6 +775,18 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitInitEl(_ ctx: PDDLParser.InitElContext)
 	/**
+	 * Enter a parse tree produced by {@link PDDLParser#fLiteral}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterFLiteral(_ ctx: PDDLParser.FLiteralContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#fLiteral}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitFLiteral(_ ctx: PDDLParser.FLiteralContext)
+	/**
 	 * Enter a parse tree produced by {@link PDDLParser#nameLiteral}.
 	 - Parameters:
 	   - ctx: the parse tree
