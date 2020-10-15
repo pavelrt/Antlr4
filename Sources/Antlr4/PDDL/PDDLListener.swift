@@ -19,18 +19,6 @@ public protocol PDDLListener: ParseTreeListener {
 	 */
 	func exitPddlDoc(_ ctx: PDDLParser.PddlDocContext)
 	/**
-	 * Enter a parse tree produced by {@link PDDLParser#gameproblem}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterGameproblem(_ ctx: PDDLParser.GameproblemContext)
-	/**
-	 * Exit a parse tree produced by {@link PDDLParser#gameproblem}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitGameproblem(_ ctx: PDDLParser.GameproblemContext)
-	/**
 	 * Enter a parse tree produced by {@link PDDLParser#domain}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -666,6 +654,18 @@ public protocol PDDLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitFExpDA(_ ctx: PDDLParser.FExpDAContext)
+	/**
+	 * Enter a parse tree produced by {@link PDDLParser#gameproblem}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterGameproblem(_ ctx: PDDLParser.GameproblemContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#gameproblem}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitGameproblem(_ ctx: PDDLParser.GameproblemContext)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#problem}.
 	 - Parameters:

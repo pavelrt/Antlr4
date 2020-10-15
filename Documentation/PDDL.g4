@@ -18,11 +18,7 @@ pddlDoc
    : domain | problem | gameproblem
    ;
 
-/************* GAME PROBLEM ****************************/ 
 
-gameproblem
-   : '(' DEFINE problemDecl problemDomain requireDef? objectDecl? initState goal+ probConstraints? metricSpec* ')'
-   ;
 
 /************* DOMAINS ****************************/ 
 domain
@@ -245,6 +241,13 @@ fAssignDA
 
 fExpDA
    : '(' ( ( binaryOp fExpDA fExpDA ) | ( '-' fExpDA ) ) ')' | '?' DURATION | fExp
+   ;
+
+
+/************* GAME PROBLEM ****************************/ 
+
+gameproblem
+   : '(' DEFINE problemDecl problemDomain requireDef? objectDecl? initState goal probConstraints? metricSpec? goal probConstraints? metricSpec? ')'
    ;
 
 /************* PROBLEMS ****************************/ 
