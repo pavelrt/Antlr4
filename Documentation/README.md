@@ -4,9 +4,15 @@ A description of this package.
 
 https://medium.com/@dmytro.anokhin/parsing-and-evaluating-expressions-using-antlr-in-swift-397609b1f7d4
 
+Run in Documentation dir:
+
+antlr -Dlanguage=Swift -message-format gnu -o PDDL PDDL.g4
+
 antlr4 -Dlanguage=Swift -message-format gnu -o Autogen Arithmetic.g4
 
-antlr -Dlanguage=Swift -message-format gnu -o Sources/SwiftPDDLParser/Autogen PDDL.g4
+Copy PDDL dir to Sources/Antlr4/PDDL
+
+----OLD antlr -Dlanguage=Swift -message-format gnu -o Sources/SwiftPDDLParser/Autogen PDDL.g4
 
 1. Download source code for ANTLR
 

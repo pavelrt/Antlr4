@@ -1,4 +1,4 @@
-// Generated from PDDL.g4 by ANTLR 4.8
+// Generated from PDDL.g4 by ANTLR 4.9
 import Antlr4
 
 open class PDDLLexer: Lexer {
@@ -85,7 +85,7 @@ open class PDDLLexer: Lexer {
 
 	public
 	required init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION)
+	    RuntimeMetaData.checkVersion("4.9", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, PDDLLexer._ATN, PDDLLexer._decisionToDFA, PDDLLexer._sharedContextCache)
 	}

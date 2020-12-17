@@ -1,4 +1,4 @@
-// Generated from PDDL.g4 by ANTLR 4.8
+// Generated from PDDL.g4 by ANTLR 4.9
 
 import Antlr4
 
@@ -990,13 +990,13 @@ open class PDDLBaseListener: PDDLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterEveryRule(_ ctx: ParserRuleContext) { }
+	open func enterEveryRule(_ ctx: ParserRuleContext) throws { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitEveryRule(_ ctx: ParserRuleContext) { }
+	open func exitEveryRule(_ ctx: ParserRuleContext) throws { }
 	/**
 	 * {@inheritDoc}
 	 *

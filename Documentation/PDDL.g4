@@ -11,6 +11,7 @@
  * https://bitbucket.org/hfoffani/pddl-parser
  * 
  * This file carries the same license from the original.
+ * Modified for PDDL games by Pavel Rytir
  */
 
 grammar PDDL;
@@ -452,6 +453,7 @@ metricFExp
 	: '(' binaryOp metricFExp metricFExp ')'
 	| '(' ('*'|'/') metricFExp metricFExp+ ')'
 	| '(' '-' metricFExp ')'
+	| '(' '+' metricFExp ')'
 	| NUMBER
 	| '(' functionSymbol name* ')'
 	| functionSymbol
