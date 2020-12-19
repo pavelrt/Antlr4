@@ -500,6 +500,7 @@ REQUIRE_KEY
     | ':timed-initial-literals'
     | ':preferences'
     | ':constraints'
+    | ':duration-inequalities'
     ;
 
 /*
