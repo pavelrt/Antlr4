@@ -451,7 +451,7 @@ optimization : 'minimize' | 'maximize' ;
 
 metricFExp
 	: '(' binaryOp metricFExp metricFExp ')'
-	| '(' ('*'|'/') metricFExp metricFExp+ ')'
+	| '(' ('*'|'+') metricFExp metricFExp+ ')'
 	| '(' '-' metricFExp ')'
 	| '(' '+' metricFExp ')'
 	| NUMBER
