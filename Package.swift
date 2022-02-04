@@ -16,9 +16,22 @@ let package = Package(
     targets: [
         .target(
             name: "Antlr4",
-            dependencies: []),
+            dependencies: [],
+            exclude: [
+                "PDDL/PDDLLexer.tokens", 
+                "PDDL/PDDLLexer.interp",
+                "PDDL/PDDL.interp",
+                "PDDL/PDDL.tokens"
+                ]),
         .testTarget(
             name: "Antlr4Tests",
-            dependencies: ["Antlr4"]),
+            dependencies: ["Antlr4"],
+            resources: [
+                .copy("VisitorCalc.g4"),
+                .copy("VisitorBasic.g4"),
+                .copy("LexerB.g4"),
+                .copy("Threading.g4"),
+                .copy("LexerA.g4")
+                ]),
     ]
 )
