@@ -1,4 +1,4 @@
-// Generated from PDDL.g4 by ANTLR 4.9.3
+// Generated from java-escape by ANTLR 4.11.1
 
 import Antlr4
 
@@ -750,6 +750,19 @@ open class PDDLBaseListener: PDDLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitAssignOpT(_ ctx: PDDLParser.AssignOpTContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPlayerGoal(_ ctx: PDDLParser.PlayerGoalContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPlayerGoal(_ ctx: PDDLParser.PlayerGoalContext) { }
 
 	/**
 	 * {@inheritDoc}

@@ -1,4 +1,4 @@
-// Generated from PDDL.g4 by ANTLR 4.9.3
+// Generated from java-escape by ANTLR 4.11.1
 import Antlr4
 
 /**
@@ -690,6 +690,18 @@ public protocol PDDLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitAssignOpT(_ ctx: PDDLParser.AssignOpTContext)
+	/**
+	 * Enter a parse tree produced by {@link PDDLParser#playerGoal}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterPlayerGoal(_ ctx: PDDLParser.PlayerGoalContext)
+	/**
+	 * Exit a parse tree produced by {@link PDDLParser#playerGoal}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitPlayerGoal(_ ctx: PDDLParser.PlayerGoalContext)
 	/**
 	 * Enter a parse tree produced by {@link PDDLParser#gameproblem}.
 	 - Parameters:

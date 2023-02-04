@@ -358,18 +358,19 @@ fExpT
 
 /************* GAME PROBLEMS ****************************/
 
+playerGoal
+	: goal
+      probConstraints?
+      metricSpec?
+    ;
+
 gameproblem
 	: '(' 'define' problemDecl
 	  problemDomain
       requireDef?
       objectDecl?
       initState
-      goal
-      probConstraints?
-      metricSpec?
-      goal
-      probConstraints?
-      metricSpec?
+      playerGoal+
       // lengthSpec? This is not defined anywhere in the BNF spec
       ')'
     ;
